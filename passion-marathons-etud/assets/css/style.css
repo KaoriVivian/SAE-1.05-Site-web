@@ -187,6 +187,8 @@ section
 	color:rgb(68,68,68);
 	line-height:24px;
 	text-align:justify;
+	text-transform: initial;
+	letter-spacing: normal;
 }
 #temoignage img
 {	width:50%;
@@ -264,13 +266,57 @@ footer a
 }
 
 /* Mise en forme de la page alimentation.html */
-nav > button:hover {
-	color: #0ba3d1;
+#alimentation>nav
+{
+	margin: 2.5% 0;
 }
 
-nav > button {
-	background: none;
-    border-style: none;
+nav > p:hover {
+	color: rgb(140, 145, 155);
+}
+
+nav > p {
+    font-family: Oswald;
+    font-style: normal;
+    color: #d3d3d3;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+	font-size: 1.5em;
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+nav > img {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#bloc_principal h1
+{
+	color: #0ba3d1;
+	font-size: 1.8rem;
+	letter-spacing: 3.6px;
+	color: rgb(13, 164, 211);
+	text-transform: uppercase;
+}
+
+#alimentation>article h2
+{
+	text-align: start;
+	font-family :Lato;
+	font-size : 1.5rem;
+	letter-spacing : 2px;
+	color: #0ba3d1;
+	text-transform: initial;
+}
+
+.fantome
+{
+	display: inline-block;
+	height: 100%;
+	width: 0;
+	vertical-align: middle;
 }
 
 
