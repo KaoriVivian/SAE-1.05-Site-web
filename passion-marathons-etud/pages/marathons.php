@@ -44,13 +44,15 @@
 					<tr><th>Date<th>Marathon<th>Ville
 				</thead>
 				<tbody>
-					<tr><td>14 janvier 2024 <td>Ho Chi Minh City Marathon<td>Vietnam
-					<tr><td>28 janvier 2024<td>Miami Marathon<td>Etats-Unis
-					<tr><td>25 février 2024<td>	Carthage Race Marathon<td>Tunisie
-					<tr><td>14 avril 2024<td>Marathon de Rotterdam<td>Pays-Bas
-					<tr><td>5 mai 2024<td>Toronto Marathon<td>Japon
-					<tr><td>11 mai 2024<td>Helsinki city Marathon<td>Finlande
-					<tr><td>26 mai 2024<td>Martahon d'Edimbourg<td>Ecosse
+					<?php
+					$leFichier = fopen("../assets/datas/marathons.txt", "r");
+					while(! feof($leFichier))
+					{
+						$ligne = fgets($leFichier, 250);
+						$tableau = explode(";", $ligne);
+						echo "<tr><td>". $tableau[0] ."<td>". $tableau[1] ."<td>". $tableau[2];
+					}
+					?>
 					<tr><td>29 mai 2024<td>Munnar Marathon <td>Inde
 				</tbody>
 			</table>

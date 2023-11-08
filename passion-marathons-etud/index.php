@@ -16,7 +16,7 @@
 			<h1>Aller au bout de soi-même</h1>
 		</header>
 		<nav>
-			<a href="./pages/marathons.html">
+			<a href="./pages/marathons.php">
 				<img src="./assets/images/menu/dest.svg" alt="Les marathons dans le monde">
 				Marathons
 			</a>
