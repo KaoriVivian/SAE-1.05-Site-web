@@ -8,6 +8,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald&display=swap" rel="stylesheet"> 
+	<script src="https://kit.fontawesome.com/620fc58eba.js" crossorigin="anonymous"></script>
 </head>
 <body>
 	<div id="bloc_principal">
@@ -126,6 +127,7 @@
 			</div>
 			<div>
 				<a href="#">
+					<i class="fa-brands fa-instagram"></i>
 	               	Rejoignez-nous sur Insta
 				</a>
 			</div>
