@@ -107,10 +107,10 @@
 			<?php
         $numbers = array();
         $arraysWidth = sizeof($numbers);
-        $STR = "";
+        $html_str = "";
 
         while ($arraysWidth != 10) {
-            $n = random_int(1, 20);
+            $n = random_int(1, 16);
             if (!(in_array($n,$numbers))) {
                 array_push($numbers, $n);
                 $arraysWidth++;
@@ -119,10 +119,10 @@
 
         foreach($numbers as $num)
         {
-            $STR .= $num."; ";
+            $html_str .= '<a href="#" style="background-image:url(./assets/images/home/instagram/insta'. $num .'.webp);background-size: cover; background-position: center center; "> </a>';
         }
         echo sizeof($numbers);
-        echo ("<p>".$STR."</p>");
+        echo $html_str;
         ?>
 			</div>
 			<div>
