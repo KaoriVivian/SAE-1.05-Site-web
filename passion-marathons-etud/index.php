@@ -121,7 +121,6 @@
         {
             $html_str .= '<a href="#" style="background-image:url(./assets/images/home/instagram/insta'. $num .'.webp);background-size: cover; background-position: center center; "> </a>';
         }
-        echo sizeof($numbers);
         echo $html_str;
         ?>
 			</div>
