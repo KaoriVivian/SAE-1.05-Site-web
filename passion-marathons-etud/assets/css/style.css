@@ -264,8 +264,13 @@ footer a
 }
 
 /* Mise en forme de la page alimentation.html */
-nav > p:hover {
+nav > button:hover {
 	color: #0ba3d1;
+}
+
+nav > button {
+	background: none;
+    border-style: none;
 }
 
 
