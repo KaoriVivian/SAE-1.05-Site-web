@@ -1,27 +1,32 @@
-window.addEventListener('DOMContentLoaded',function(){
-    const av = this.document.getElementById("av")
-    const pd = this.document.getElementById("pd")
-    const ap = this.document.getElementById("ap")
+window.addEventListener("DOMContentLoaded",function(){
+    //Buttons
+    const btnAvant = document.getElementById("avant");
+    const btnPendant = document.getElementById("pendant");
+    const btnApres = document.getElementById("apres");
 
+    //Articles
+    const articleAvant = document.getElementById("avantArticle");
+    const articlePendant = document.getElementById("pendantArticle");
+    const articleApres = document.getElementById("apresArticle");
 
-
-    av.addEventListener('click',function(){
-        document.getElementById("avantM").style.display = "inline-block"
-        document.getElementById("pendantM").style.display = "none"
-        document.getElementById("apresM").style.display = "none"
-
+    btnAvant.addEventListener('click',function(){
+        console.log("avant");
+        ShowArticle('block', 'none', 'none');
     })
-    pd.addEventListener('click',function(){
-        document.getElementById("avantM").style.display = "none"
-        document.getElementById("pendantM").style.display = "inline-block"
-        document.getElementById("apresM").style.display = "none"
-
+    btnPendant.addEventListener('click',function(){
+        console.log("pendant");
+        ShowArticle('none', 'block', 'none');
     })
-    ap.addEventListener('click',function(){
-        document.getElementById("avantM").style.display = "none"
-        document.getElementById("pendantM").style.display = "none"
-        document.getElementById("apresM").style.display = "inline-block"
-
+    btnApres.addEventListener('click',function(){
+        console.log("apres");
+        ShowArticle('none', 'none', 'block');
     })
+
+    function ShowArticle(avant, pendant, apres)
+    {
+        articleAvant.style.display = avant;
+        articlePendant.style.display = pendant;
+        articleApres.style.display = apres;
+    }
 
 })
