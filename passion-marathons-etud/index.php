@@ -37,7 +37,7 @@
 				<img src="./assets/images/menu/nous.svg" alt="Equipe de Passion Marathons">
 				L'équipe
 			</a>
-			<a href="./calculatrice.html">
+			<a href="./pages/calculatrice.html">
 				<img src="./assets/images/menu/abacus.svg" alt="Calcule le nombre de macarons que tu as dépensé">
 				calculette
 			</a>
