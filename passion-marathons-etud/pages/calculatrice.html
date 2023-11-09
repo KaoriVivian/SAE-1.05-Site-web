@@ -10,54 +10,58 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="./../assets/css/style.css">
     </head>
     <body>
-
-        <header>
-			<img src="./../assets/images/banniere.png" alt="Passion Marathons - Agence spécialisées dans les marathons">
-			<p>Aller au bout de soi-même</p>
-		</header>
-		<nav>
-			<a href="./../index.php">
-				<img src="./../assets/images/menu/house.svg" alt="Vers l'acceuil">
-				Accueil
-			</a>
-			<a href="./marathons.php">
-				<img src="./../assets/images/menu/dest.svg" alt="Les marathons dans le monde">
-				Marathons
-			</a>
-			<a href="./alimentation.html">
-				<img src="./../assets/images/menu/conseils.svg" alt="Conseils pour la préparation d'un marathon">
-				conseils
-			</a>
-			<a href="#">
-				<img src="./../assets/images/menu/tems.svg" alt="Témoignages de marathoniens">
-				Témoignages
-			</a>
-			<a href="#">
-				<img src="./../assets/images/menu/nous.svg" alt="Equipe de Passion Marathons">
-				L'équipe
-			</a>
-			<a href="./calculatrice.html">
-				<img src="./../assets/images/menu/abacus.svg" alt="Calcule le nombre de macarons que tu as dépensé">
-				calculette
-			</a>
-		</nav>
-
-        <h1>calculatrice</h1>
-        <p>Vitesse (Km/h): </p>
-        <input type="text" id="vitesse">
-        <p>Temps (Minute): </p>
-        <input type="text" id="temps">
-        <p>Poids (Kg): </p>
-        <input type="text" id="poids">
-        <br>
-        <br>
-        <button id="calculer">Calculer</button>
-        <div id="nbKcal"></div>
-        <div id="nbMacarons"></div>
+		<div id="bloc_principal">
+			
+			<header>
+				<img src="./../assets/images/banniere.png" alt="Passion Marathons - Agence spécialisées dans les marathons">
+				<p>Aller au bout de soi-même</p>
+			</header>
+			<nav>
+				<a href="./../index.php">
+					<img src="./../assets/images/menu/house.svg" alt="Vers l'acceuil">
+					Accueil
+				</a>
+				<a href="./marathons.php">
+					<img src="./../assets/images/menu/dest.svg" alt="Les marathons dans le monde">
+					Marathons
+				</a>
+				<a href="./alimentation.html">
+					<img src="./../assets/images/menu/conseils.svg" alt="Conseils pour la préparation d'un marathon">
+					conseils
+				</a>
+				<a href="#">
+					<img src="./../assets/images/menu/tems.svg" alt="Témoignages de marathoniens">
+					Témoignages
+				</a>
+				<a href="#">
+					<img src="./../assets/images/menu/nous.svg" alt="Equipe de Passion Marathons">
+					L'équipe
+				</a>
+				<a href="./calculatrice.html">
+					<img src="./../assets/images/menu/abacus.svg" alt="Calcule le nombre de macarons que tu as dépensé">
+					calculette
+				</a>
+			</nav>
+	
+			<h1>Calculatrice</h1>
+			<p>Vitesse (Km/h): </p>
+			<input type="text" id="vitesse">
+			<p>Temps (Minutes): </p>
+			<input type="text" id="temps">
+			<p>Poids (Kg): </p>
+			<input type="text" id="poids">
+			<br>
+			<br>
+			<button id="calculer">Calculer</button>
+			<div id="nbKcal"></div>
+			<div id="nbMacarons"></div>
+		</div>
         
         <script src="../assets/js/calculatrice.js"></script>
     </body>
