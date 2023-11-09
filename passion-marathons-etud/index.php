@@ -13,25 +13,33 @@
 <body>
 	<div id="bloc_principal">
 		<header>
-			<img src="./assets/images/banniere.png" alt="Passion Marathons - Agence spécialisées dans les marathons">
-			<h1>Aller au bout de soi-même</h1>
+			<img src="./../assets/images/banniere.png" alt="Passion Marathons - Agence spécialisées dans les marathons">
+			<p>Aller au bout de soi-même</p>
 		</header>
 		<nav>
-			<a href="./pages/marathons.php">
-				<img src="./assets/images/menu/dest.svg" alt="Les marathons dans le monde">
+			<a href="./../index.php">
+				<img src="./../assets/images/menu/house.svg" alt="Vers l'acceuil">
+				Accueil
+			</a>
+			<a href="./marathons.php">
+				<img src="./../assets/images/menu/dest.svg" alt="Les marathons dans le monde">
 				Marathons
 			</a>
-			<a href="./pages/alimentation.html">
-				<img src="./assets/images/menu/conseils.svg" alt="Conseils pour la préparation d'un marathon">
+			<a href="./alimentation.html">
+				<img src="./../assets/images/menu/conseils.svg" alt="Conseils pour la préparation d'un marathon">
 				conseils
 			</a>
 			<a href="#">
-				<img src="./assets/images/menu/tems.svg" alt="Témoignages de marathoniens">
+				<img src="./../assets/images/menu/tems.svg" alt="Témoignages de marathoniens">
 				Témoignages
 			</a>
 			<a href="#">
-				<img src="./assets/images/menu/nous.svg" alt="Equipe de Passion Marathons">
+				<img src="./../assets/images/menu/nous.svg" alt="Equipe de Passion Marathons">
 				L'équipe
+			</a>
+			<a href="./calculatrice.html">
+				<img src="./../assets/images/menu/abacus.svg" alt="Calcule le nombre de macarons que tu as dépensé">
+				calculette
 			</a>
 		</nav>
 		<section id="alaune">

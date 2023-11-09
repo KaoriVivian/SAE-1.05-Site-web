@@ -11,15 +11,17 @@
 </head>
 <body>
 	<div id="bloc_principal">
+
 		<header>
 			<img src="./../assets/images/banniere.png" alt="Passion Marathons - Agence spécialisées dans les marathons">
 			<p>Aller au bout de soi-même</p>
 		</header>
 		<nav>
 			<a href="./../index.php">
+				<img src="./../assets/images/menu/house.svg" alt="Vers l'acceuil">
 				Accueil
 			</a>
-			<a href="#">
+			<a href="./marathons.php">
 				<img src="./../assets/images/menu/dest.svg" alt="Les marathons dans le monde">
 				Marathons
 			</a>
@@ -35,8 +37,12 @@
 				<img src="./../assets/images/menu/nous.svg" alt="Equipe de Passion Marathons">
 				L'équipe
 			</a>
-			
+			<a href="./calculatrice.html">
+				<img src="./../assets/images/menu/abacus.svg" alt="Calcule le nombre de macarons que tu as dépensé">
+				calculette
+			</a>
 		</nav>
+		
 		<div id="liste_marathons">
 			<h1 class="titre_page_secondaire">Marathons 2024</h1>
 			<table>
