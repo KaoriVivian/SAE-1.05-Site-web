@@ -114,23 +114,28 @@
 			</div>
 			<div>
 			<?php
-        $numbers = array();
-        $arraysWidth = sizeof($numbers);
-        $html_str = "";
+			$numbers = array();
+			$arraysWidth = sizeof($numbers);
+			$html_str = "<div>";
 
-        while ($arraysWidth != 10) {
-            $n = random_int(1, 16);
-            if (!(in_array($n,$numbers))) {
-                array_push($numbers, $n);
-                $arraysWidth++;
-            }
-        } 
-
-        foreach($numbers as $num)
-        {
-            $html_str .= '<a href="#" style="background-image:url(./assets/images/home/instagram/insta'. $num .'.webp);background-size: cover; background-position: center center; "> </a>';
-        }
-        echo $html_str;
+			while ($arraysWidth != 10) {
+				$n = random_int(1, 16);
+				if (!(in_array($n,$numbers))) {
+					array_push($numbers, $n);
+					$arraysWidth++;
+				}
+			} 
+			
+			$i = 0;
+			for (;$i<5;$i++){
+				$html_str .= '<a href="#" style="background-image:url(./assets/images/home/instagram/insta'. $numbers[$i] .'.webp);background-size: cover; background-position: center center; "> </a>';
+			}
+			$html_str .= "</div><div>";
+			for (;$i<10;$i++){
+				$html_str .= '<a href="#" style="background-image:url(./assets/images/home/instagram/insta'. $numbers[$i] .'.webp);background-size: cover; background-position: center center; "> </a>';
+			}
+			
+			echo $html_str;
         ?>
 			</div>
 			<div>

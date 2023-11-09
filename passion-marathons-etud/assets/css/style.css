@@ -189,7 +189,7 @@ section
 	text-align:justify;
 	text-transform: initial;
 	letter-spacing: normal;
-}
+} 
 #temoignage img
 {	width:50%;
 	height:auto;
@@ -197,14 +197,14 @@ section
 } 
 /*Mise en forme de la section Instagram */
 #instagram div:nth-child(2) a
-{	width:145px;
-	height:145px;
+{	width:200px;
+	height:200px;
 	
 }
-#instagram div:nth-child(2)
+#instagram div:nth-child(2) div
 {	display:grid;
-	grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
-	grid-gap: 3px;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	grid-gap: 5px;
 	margin-top:20px;
 }
 
