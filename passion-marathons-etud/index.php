@@ -43,6 +43,9 @@
 			</a>
 		</nav>
 		<section id="alaune">
+			<div class="titre_section">
+				<h2>À la une</h2>
+			</div>
 			<img src="./assets/images/home/alaune/new-york.jpg" alt="Ligne d'arrivée du marathon de New York">
 			<div>
 				<p>By Greg / Juillet 2023</p>
@@ -105,7 +108,7 @@
 				L’ambiance est dingue. Les new yorkais sont fous surtout à Brooklyn. 
 				Le parcours est compliqué car beaucoup de ligne droite en faut plat montant et les ponts sont de vrais col ! L’arrivée à central Park est grandiose avec du monde mêlés au couleur de l’automne. A noté qu’il y a très peu de nourriture au ravitaillement si ce n’est deux points où ils distribuent des gels. 
 				Il faut mieux prévoir ! Sinon il y a à boire tous les miles (1,6km) sauf sur les ponts.</p>
-				<img src="./assets/images/home/temoignage/new-york-ligne.jpg">
+				<img src="./assets/images/home/temoignage/new-york-ligne.jpg" alt="New-York ligne">
 			</div>
 		</section>
 		<section id="instagram">
