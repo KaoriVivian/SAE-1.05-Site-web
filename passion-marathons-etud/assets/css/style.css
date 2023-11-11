@@ -269,6 +269,7 @@ footer a
 #alimentation>nav
 {
 	margin: 2.5% 0;
+	background: url(./../images/technique/section-header.png) repeat-x 0 50%;
 }
 
 nav > p:hover {
@@ -285,11 +286,24 @@ nav > p {
 	cursor: pointer;
 	display: inline-block;
 	vertical-align: middle;
+	background-color: white;
+	margin: 0 35px;
 }
 
-nav > img {
-	display: inline-block;
-	vertical-align: middle;
+#alimentation>article img
+{
+	height: 300px;
+}
+
+#alimentation>article p
+{
+	font-size: 1.0rem;
+    color: rgb(68,68,68);
+    line-height: 24px;
+    text-align: justify;
+    text-transform: initial;
+    letter-spacing: normal;
+
 }
 
 #bloc_principal h1
