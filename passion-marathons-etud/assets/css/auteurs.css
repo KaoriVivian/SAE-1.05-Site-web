@@ -20,11 +20,10 @@ body
     height: 100vh;
 }
 
-#contenaire
+#conteneur
 {
     height: 100%;
-    width: 100%;
-}
+    width: 100%;}
 
 #sections_droite, #sections_gauche
 {
@@ -36,7 +35,7 @@ body
 
 #sections_droite
 {
-    background-image: url("./../images/auteurs/gd.jfif");
+    background-image: url("./../images/auteurs/Viviane/Ozen.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
