@@ -1,0 +1,55 @@
+*
+{	box-sizing:border-box;
+	margin:0px
+}
+
+html
+{	font-family: Oswald;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 16px;
+	color : white;
+	letter-spacing: 3.6px;
+	font-weight:400;
+	text-transform:uppercase;
+}
+
+body
+{
+    margin: 0;
+    height: 100vh;
+}
+
+#contenaire
+{
+    height: 100%;
+    width: 100%;
+}
+
+#sections_droite, #sections_gauche
+{
+    overflow: hidden;
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+}
+
+#sections_droite
+{
+    background-image: url("./../images/auteurs/gd.jfif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    background-position-x: center;
+    cursor: pointer;
+}
+
+#sections_gauche
+{
+    background-image: url("./../images/auteurs/valorant.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    text-align: center;
+    cursor: pointer;
+}
