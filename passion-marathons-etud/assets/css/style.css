@@ -1,288 +1,322 @@
-*
-{	box-sizing:border-box;
-	margin:0px
+* {
+	box-sizing: border-box;
+	margin: 0px
 }
-html
-{	font-family: Oswald;
+
+html {
+	font-family: Oswald;
 	font-weight: normal;
 	font-style: normal;
 	font-size: 16px;
-	color : rgb(140, 145, 155);
+	color: rgb(140, 145, 155);
 	letter-spacing: 3.6px;
-	font-weight:400;
-	text-transform:uppercase;
+	font-weight: 400;
+	text-transform: uppercase;
 }
-a
-{	text-decoration:none;
+
+a {
+	text-decoration: none;
 }
-body
-{	
-	padding:8px;
-	text-align:center;
+
+body {
+	padding: 8px;
+	text-align: center;
 }
+
 /*Mise en forme du bloc principal*/
-#bloc_principal
-{	width:1050px;
-	margin:0 auto;
+#bloc_principal {
+	width: 1050px;
+	margin: 0 auto;
 }
+
 /*Mise en forme de l'entête : image et slogan*/
-header img
-{	width:100%;
-	height:auto;
+header img {
+	width: 100%;
+	height: auto;
 }
-header h1
-{	text-align:center;
-	font-size:1.05rem;
-	
+
+header h1 {
+	text-align: center;
+	font-size: 1.05rem;
+
 }
-#bloc_principal > nav 
-{	height:50px;
-	margin-top:20px;
-	border-top : 1px solid black;
-	border-bottom:3px solid black;
-	text-align:center;
-	
+
+#bloc_principal>nav {
+	height: 50px;
+	margin-top: 20px;
+	border-top: 1px solid black;
+	border-bottom: 3px solid black;
+	text-align: center;
+
 }
-#bloc_principal > nav img
-{	height:18px;
-	width:auto;
+
+#bloc_principal>nav img {
+	height: 18px;
+	width: auto;
 }
-#bloc_principal > nav a
-{	height: 50px;
+
+#bloc_principal>nav a {
+	height: 50px;
 	line-height: 50px;
 	padding-left: 15px;
 	padding-right: 15px;
-	font-size:1.05rem;
-	color : rgb(51, 51, 51);
-	font-weight:200;
-}
-/*Mise en forme de la section alaune*/
-#alaune
-{	margin-top: 20px;
-	position : relative;
-}
-#alaune img
-{	width:100%;
-	height:auto;
-}
-#alaune div
-{	position : absolute;
-	width:100%;
-	height:100%;
-	top:0px;
-	left:0px;
-	display : flex;
-	flex-direction:column;
-	justify-content:center;
-	align-items:center;
-}
-#alaune div:hover
-{	background:rgba(0,0,0,0.5);
-}
-#alaune p:first-child
-{	font-size:0.8rem;
-	letter-spacing: 2.6px;
-	color:white;
-}
-	
-#alaune p:nth-child(2)
-{	font-size:2.5rem;
-	color:white;
-	font-weight:bold;
-	
-}
-#alaune a
-{	padding : 10px 20px;
-	border:3px solid white;
-	font-size:1.15rem;
-	letter-spacing:2px;
-	text-transform:uppercase;
-	color:white;
-	margin-top : 25px;
-}
-/* Mise en forme du titre d'une section et de la marge haute d'une section */
-.titre_section
-{	background: url("./../images/technique/section-header.png") repeat-x 0 50%;
-	text-align:center;
-}
-.titre_section h2
-{	font-size:2.5rem;
-	letter-spacing:2px;
-	background-color:white;
-	display:inline-block;
+	font-size: 1.05rem;
+	color: rgb(51, 51, 51);
+	font-weight: 200;
 }
 
-section
-{	margin-top:20px;
+/*Mise en forme de la section alaune*/
+#alaune {
+	margin-top: 20px;
+	position: relative;
 }
+
+#alaune img {
+	width: 100%;
+	height: auto;
+}
+
+#alaune div {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#alaune div:hover {
+	background: rgba(0, 0, 0, 0.5);
+}
+
+#alaune p:first-child {
+	font-size: 0.8rem;
+	letter-spacing: 2.6px;
+	color: white;
+}
+
+#alaune p:nth-child(2) {
+	font-size: 2.5rem;
+	color: white;
+	font-weight: bold;
+
+}
+
+#alaune a {
+	padding: 10px 20px;
+	border: 3px solid white;
+	font-size: 1.15rem;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: white;
+	margin-top: 25px;
+}
+
+/* Mise en forme du titre d'une section et de la marge haute d'une section */
+.titre_section {
+	background: url("./../images/technique/section-header.png") repeat-x 0 50%;
+	text-align: center;
+}
+
+.titre_section h2 {
+	font-size: 2.5rem;
+	letter-spacing: 2px;
+	background-color: white;
+	display: inline-block;
+}
+
+section {
+	margin-top: 20px;
+}
+
 /* Mise en forme de la section présentant les 3 derniers articles */
 
-#articles div:nth-child(2)
-{	display:flex;
-	justify-content:space-around;
-	align-items:start;
-	margin-top:20px;
+#articles div:nth-child(2) {
+	display: flex;
+	justify-content: space-around;
+	align-items: start;
+	margin-top: 20px;
 }
-#articles figure
-{	width:300px;
-	height:250px;
+
+#articles figure {
+	width: 300px;
+	height: 250px;
 }
-#articles figure div
-{	width:100%;
-	height:200px;
-	object-fit:cover;
+
+#articles figure div {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
 }
-#articles figure img
-{	height:100%;
-	width:100%;
+
+#articles figure img {
+	height: 100%;
+	width: 100%;
 }
-#articles a
-{	letter-spacing:0.9px;
-	color:black;
-	font-weight:normal;
-	
-}  
-#articles figure  h2
-{	font-size:18px;
-	font-weight:normal;
+
+#articles a {
+	letter-spacing: 0.9px;
+	color: black;
+	font-weight: normal;
+
 }
-#articles figure p
-{	font-size:14px;
-	color:RGB(68,68,68);
+
+#articles figure h2 {
+	font-size: 18px;
+	font-weight: normal;
+}
+
+#articles figure p {
+	font-size: 14px;
+	color: RGB(68, 68, 68);
 }
 
 /*Mise en forme de la section dédiée à un témoignage*/
 
-#temoignage div:nth-child(2)
-{	margin-top:20px;
-	text-transform:none;
-	font-family:lato;
-	letter-spacing:normal;
+#temoignage div:nth-child(2) {
+	margin-top: 20px;
+	text-transform: none;
+	font-family: lato;
+	letter-spacing: normal;
 }
-#temoignage blockquote::before
-{	quotes: "\201C""\201D""\2018""\2019";
+
+#temoignage blockquote::before {
+	quotes: "\201C""\201D""\2018""\2019";
 	content: open-quote;
 	font-size: 4em;
 	line-height: 0.1em;
 	margin-right: .15em;
 	vertical-align: -.4em;
 }
-#temoignage blockquote::after
-{	content: close-quote;
+
+#temoignage blockquote::after {
+	content: close-quote;
 	font-size: 4em;
 	line-height: .1em;
 	margin-left: .15em;
 	vertical-align: -.7em;
 }
-#temoignage blockquote
-{	font-family: Georgia,"Times New Roman",Times,serif;
+
+#temoignage blockquote {
+	font-family: Georgia, "Times New Roman", Times, serif;
 	color: #000;
 	font-size: 1.2rem;
 	line-height: 1.5em;
 	quotes: "\201C""\201D""\2018""\2019";
-	font-style:italic;
+	font-style: italic;
 }
-.texte_paragraphe
-{	font-size:1.0rem;
-	color:rgb(68,68,68);
-	line-height:24px;
-	text-align:justify;
+
+.texte_paragraphe {
+	font-size: 1.0rem;
+	color: rgb(68, 68, 68);
+	line-height: 24px;
+	text-align: justify;
 	text-transform: initial;
 	letter-spacing: normal;
 }
-#temoignage img
-{	width:50%;
-	height:auto;
-	margin:10px;
-} 
-/*Mise en forme de la section Instagram */
-#instagram div:nth-child(2) a
-{	width:200px;
-	height:200px;
-	
+
+#temoignage img {
+	width: 50%;
+	height: auto;
+	margin: 10px;
 }
-#instagram div:nth-child(2)
-{	display:grid;
+
+/*Mise en forme de la section Instagram */
+#instagram div:nth-child(2) a {
+	width: 200px;
+	height: 200px;
+
+}
+
+#instagram div:nth-child(2) {
+	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 	grid-gap: 5px;
-	margin-top:20px;
+	margin-top: 20px;
 }
 
-#instagram div:nth-child(3) a
-{	padding : 10px 20px;
-	background-color:#0ba3d1;
-	color:white;
-	display:inline-block;
-	margin-top:20px;
-	border-radius:5px;
-	
+#instagram div:nth-child(3) a {
+	padding: 10px 20px;
+	background-color: #0ba3d1;
+	color: white;
+	display: inline-block;
+	margin-top: 20px;
+	border-radius: 5px;
+
 }
+
 /*Mise en forme du pied de page*/
-footer
-{	margin-top:30px;
-	background-color:#222222;
-	display : flex;
-	justify-content:space-between;
-	align-items:center;
-	height:70px;
-	padding:0px 40px;
-	color:white;
-	font-size:0.8rem;
-	text-transform:none;
-	letter-spacing:0.9px;
+footer {
+	margin-top: 30px;
+	background-color: #222222;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 70px;
+	padding: 0px 40px;
+	color: white;
+	font-size: 0.8rem;
+	text-transform: none;
+	letter-spacing: 0.9px;
 }
-footer a
-{	color:white;
+
+footer a {
+	color: white;
 }
 
 
-	
+
 /*Mise en forme de la section liste_marathons - page : marathons.html*/
 
-.titre_page_secondaire
-{	text-align:center;
-	margin : 30px 0px;
-	color : rgb(13, 164, 211);
+.titre_page_secondaire {
+	text-align: center;
+	margin: 30px 0px;
+	color: rgb(13, 164, 211);
 }
 
-#liste_marathons table
-{	width:100%;
-	border-collapse:collapse;
-	text-transform:none;
-	font-size:1.5rem;
+#liste_marathons table {
+	width: 100%;
+	border-collapse: collapse;
+	text-transform: none;
+	font-size: 1.5rem;
 }
-#liste_marathons td, th
-{	
-	border : 1px solid black;
+
+#liste_marathons td,
+th {
+	border: 1px solid black;
 }
-#liste_marathons th
-{	background-color:rgb(13, 164, 211);
-	color:white;
+
+#liste_marathons th {
+	background-color: rgb(13, 164, 211);
+	color: white;
 }
-#liste_marathons table th:nth-child(1), th:nth-child(3)
-{	width:30%;
-	background-color:rgb(13, 164, 211);
-	
+
+#liste_marathons table th:nth-child(1),
+th:nth-child(3) {
+	width: 30%;
+	background-color: rgb(13, 164, 211);
+
 }
 
 /* Mise en forme de la page alimentation.html */
-#alimentation>nav
-{
+#alimentation>nav {
 	margin: 2.5% 0;
 	background: url(./../images/technique/section-header.png) repeat-x 0 50%;
 }
 
-.btnSelected
-{
+.btnSelected {
 	color: rgb(140, 145, 155);
 }
 
-nav > p {
-    font-family: Oswald;
-    font-style: normal;
-    color: #d3d3d3;
-    text-transform: uppercase;
-    letter-spacing: 3.6px;
+nav>p {
+	font-family: Oswald;
+	font-style: normal;
+	color: #d3d3d3;
+	text-transform: uppercase;
+	letter-spacing: 3.6px;
 	font-size: 1.5em;
 	cursor: pointer;
 	display: inline-block;
@@ -291,24 +325,21 @@ nav > p {
 	margin: 0 35px;
 }
 
-#alimentation>article img
-{
+#alimentation>article img {
 	height: 300px;
 }
 
-#alimentation>article p
-{
+#alimentation>article p {
 	font-size: 1.0rem;
-    color: rgb(68,68,68);
-    line-height: 24px;
-    text-align: justify;
-    text-transform: initial;
-    letter-spacing: normal;
+	color: rgb(68, 68, 68);
+	line-height: 24px;
+	text-align: justify;
+	text-transform: initial;
+	letter-spacing: normal;
 
 }
 
-#bloc_principal h1
-{
+#bloc_principal h1 {
 	font-family: Oswald;
 	font-size: 1.8rem;
 	letter-spacing: 3.6px;
@@ -316,23 +347,18 @@ nav > p {
 	text-transform: uppercase;
 }
 
-#alimentation>article h2
-{
+#alimentation>article h2 {
 	text-align: start;
-	font-family :Lato;
-	font-size : 1.5rem;
-	letter-spacing : 2px;
+	font-family: Lato;
+	font-size: 1.5rem;
+	letter-spacing: 2px;
 	color: #0ba3d1;
 	text-transform: initial;
 }
 
-.fantome
-{
+.fantome {
 	display: inline-block;
 	height: 100%;
 	width: 0;
 	vertical-align: middle;
 }
-
-
-	
