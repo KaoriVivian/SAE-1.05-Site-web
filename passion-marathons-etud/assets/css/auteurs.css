@@ -23,7 +23,8 @@ body
 #conteneur
 {
     height: 100%;
-    width: 100%;}
+    width: 100%;
+    padding-top: 20px;}
 
 #sections_droite, #sections_gauche
 {
