@@ -29,11 +29,11 @@
 				<img src="./../assets/images/menu/conseils.svg" alt="Conseils pour la préparation d'un marathon">
 				conseils
 			</a>
-			<a href="#">
+			<a href="./../index.php#temoignage">
 				<img src="./../assets/images/menu/tems.svg" alt="Témoignages de marathoniens">
 				Témoignages
 			</a>
-			<a href="#">
+			<a href="./auteurs.html">
 				<img src="./../assets/images/menu/nous.svg" alt="Equipe de Passion Marathons">
 				L'équipe
 			</a>
