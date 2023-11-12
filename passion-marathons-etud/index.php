@@ -146,7 +146,7 @@
 	</div>
 	<footer>
 		<p>Copyright : Passion Marathons 2015/2023 - contac@passionmarathons.com</p>
-		<a href="#">Les auteurs du site </a>
+		<a href="./pages/auteurs.html">Les auteurs du site </a>
 		<a href="#bloc_principal">Haut de la page</a>
 	</footer>
 </body>
