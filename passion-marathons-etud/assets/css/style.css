@@ -272,7 +272,8 @@ footer a
 	background: url(./../images/technique/section-header.png) repeat-x 0 50%;
 }
 
-nav > p:hover {
+.btnSelected
+{
 	color: rgb(140, 145, 155);
 }
 

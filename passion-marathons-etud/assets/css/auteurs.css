@@ -1,55 +1,46 @@
-*
-{	box-sizing:border-box;
-	margin:0px
+* {
+    box-sizing: border-box;
+    margin: 0px
 }
 
-html
-{	font-family: Oswald;
-	font-weight: normal;
-	font-style: normal;
-	font-size: 16px;
-	color : white;
-	letter-spacing: 3.6px;
-	font-weight:400;
-	text-transform:uppercase;
+html {
+    font-family: Oswald;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    color: white;
+    letter-spacing: 3.6px;
+    font-weight: 400;
+    text-transform: uppercase;
 }
 
-body
-{
+body {
     margin: 0;
     height: 100vh;
 }
 
-#conteneur
-{
+#conteneur {
     height: 100%;
     width: 100%;
-    padding-top: 20px;}
+}
 
-#sections_droite, #sections_gauche
-{
+#sections_droite,
+#sections_gauche {
     overflow: hidden;
     display: inline-block;
     width: 50%;
     height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    background-position-x: center;
+    cursor: pointer;
 }
 
-#sections_droite
-{
+#sections_droite {
     background-image: url("./../images/auteurs/Viviane/Ozen.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
-    background-position-x: center;
-    cursor: pointer;
 }
 
-#sections_gauche
-{
+#sections_gauche {
     background-image: url("./../images/auteurs/valorant.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: center;
-    text-align: center;
-    cursor: pointer;
 }
