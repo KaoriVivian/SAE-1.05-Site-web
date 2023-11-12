@@ -34,7 +34,6 @@ body {
     background-size: cover;
     text-align: center;
     background-position-x: center;
-    cursor: pointer;
 }
 
 #sections_droite {
@@ -43,4 +42,11 @@ body {
 
 #sections_gauche {
     background-image: url("./../images/auteurs/valorant.webp");
+}
+
+.clickable
+{
+    height: 100%; 
+    width: 100%;
+    cursor: pointer;
 }
