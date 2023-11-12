@@ -42,17 +42,14 @@
 				calculette
 			</a>
 		</nav>
-		<section id="alaune">
-			<div class="titre_section">
-				<h2>À la une</h2>
-			</div>
+		<div id="alaune">
 			<img src="./assets/images/home/alaune/new-york.jpg" alt="Ligne d'arrivée du marathon de New York">
 			<div>
 				<p>By Greg / Juillet 2023</p>
 				<p>L'aventure d'une vie</p>
 				<a href="#">Lire plus</a>
 			</div>
-		</section>
+		</div>
 		<section id="articles">
 			<div class="titre_section">
 				<h2>Nos derniers articles</h2>
