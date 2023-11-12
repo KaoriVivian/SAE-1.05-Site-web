@@ -17,6 +17,7 @@ window.addEventListener("DOMContentLoaded", function () {
         Calculer();
     });
 
+    /// TO-DO : arround values. Display images for each macarons.
     function Calculer() {
         let vitesseVal = Number(vitesse.value);
         let tempsVal = Number(temps.value);
