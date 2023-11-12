@@ -33,7 +33,7 @@
 				<img src="./assets/images/menu/tems.svg" alt="Témoignages de marathoniens">
 				Témoignages
 			</a>
-			<a href="#">
+			<a href="./pages/auteurs.html">
 				<img src="./assets/images/menu/nous.svg" alt="Equipe de Passion Marathons">
 				L'équipe
 			</a>
