@@ -11,6 +11,14 @@
 	<script src="https://kit.fontawesome.com/620fc58eba.js" crossorigin="anonymous"></script>
 </head>
 <body>
+	<div id="call-action">
+		<div>
+			<p>Pour une <br><b>performance <br> optimale</b>,<br> confiez-nous :</p>
+			<p class="button">Votre préparation mentale</p>
+			<p class="button">L'organisation de votre prochaine course</p>
+			<p class="button">Un Coaching personnalisé en nutrition</p>
+		</div>
+	</div>
 	<div id="bloc_principal">
 		<header>
 			<img src="./assets/images/banniere.png" alt="Passion Marathons - Agence spécialisées dans les marathons">
