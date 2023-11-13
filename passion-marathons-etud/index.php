@@ -127,7 +127,7 @@
         $html_str = "";
 
         while ($arraysWidth != 10) {
-            $n = random_int(1, 16);
+            $n = random_int(1, 18);
             if (!(in_array($n,$numbers))) {
                 array_push($numbers, $n);
                 $arraysWidth++;
