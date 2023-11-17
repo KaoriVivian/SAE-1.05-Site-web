@@ -4,6 +4,11 @@ window.addEventListener("DOMContentLoaded", function () {
     const temps = document.getElementById('temps'); // Inputs
     const poids = document.getElementById('poids'); // Inputs
 
+    //Set a default value of the inputs
+    vitesse.value = ""
+    temps.value = ""
+    poids.value = ""
+
     const btnCalculer = document.getElementById('btnCalculer'); // Button
     const nbKcal = document.getElementById('nbKcal'); // Div
     const nbMacarons = document.getElementById('nbMacarons'); // Div
@@ -16,45 +21,42 @@ window.addEventListener("DOMContentLoaded", function () {
     let isTpsVisible = false
     let isPdsVisible = false
     
-    vitesse.addEventListener('change',function(){
+    vitesse.addEventListener("change",function(){
         const vitesseVal = Number(vitesse.value);
         if (vitesseVal<=0){
             error("Merci d'entrer une valeur positive et non égale a zéro");
-        }else if (0 < vVal < 8) {
+        }else if (0 < vitesseVal && vitesseVal < 8) {
             error("Cette valeur ne correspond pas à une allure de course");
-        }else{
-            isTpsVisible = true;
         }
+        else{isTpsVisible = true;}
 
-        if (isTpsVisible){
-            document.getElementById('tpsD').style.display = 'block';
-        }
+        if (isTpsVisible) {document.getElementById('tpsD').style.display = 'inline-block';hideError();}
     })
 
     temps.addEventListener('change',function(){
         const tempsVal = Number(temps.value)
         if (tempsVal<=0){
             error("Merci d'entrer une valeur positive et non égale a zéro");
-        }else{
-            isPdsVisible = true
         }
+        else{isPdsVisible = true}
 
-        if (isPdsVisible){
-            document.getElementById('pdsD').style.display = 'block'
-        }
+        if (isPdsVisible){document.getElementById('pdsD').style.display = 'block';hideError();}
     })
 
     poids.addEventListener('change',function(){
         const poidsVal = Number(poids.value)
-        if (poids <= 0){
+        if (poidsVal <= 0){
             error("Merci d'entrer une valeur positive et non égale à zéro")
-        }else{
-            calculer()
+        }
+        else{
+            hideError()
+            calculer() 
         }
     })
 
     /// TO-DO : arround values. Display images for each macarons.
     function calculer() {
+        console.log("calculation launched")
         let vitesseVal = Number(vitesse.value);
         let tempsVal = Number(temps.value);
         let poidsVal = Number(poids.value);

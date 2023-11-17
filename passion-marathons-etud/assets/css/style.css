@@ -225,7 +225,7 @@ section {
 	letter-spacing: normal;
 }
 
-#temoignage blockquote::before {
+blockquote::before {
 	quotes: "\201C""\201D""\2018""\2019";
 	content: open-quote;
 	font-size: 4em;
@@ -233,8 +233,7 @@ section {
 	margin-right: .15em;
 	vertical-align: -.4em;
 }
-
-#temoignage blockquote::after {
+blockquote::after {
 	content: close-quote;
 	font-size: 4em;
 	line-height: .1em;
@@ -242,7 +241,7 @@ section {
 	vertical-align: -.7em;
 }
 
-#temoignage blockquote {
+blockquote {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	color: #000;
 	font-size: 1.2rem;
