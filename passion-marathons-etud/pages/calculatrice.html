@@ -52,13 +52,20 @@
 		</nav>
 
 		<h1>Calculatrice</h1>
-		<p>Vitesse (Km/h): </p>
-		<input type="text" id="vitesse">
-		<p>Temps (Minutes): </p>
-		<input type="text" id="temps">
 		<br>
-		<p>Poids (Kg): </p>
-		<input type="text" id="poids">
+		<div id="vitD">
+			<p>Vitesse (Km/h): </p>
+			<input type="text" id="vitesse">
+		</div>
+		<div id="tpsD" style="display: none;">
+			<p>Temps (Minutes): </p>
+			<input type="text" id="temps">
+		</div>
+		<div id="pdsD">
+			<p>Poids (Kg): </p>
+			<input type="text" id="poids">
+		</div>
+		
 		<br>
 		<button id="btnCalculer">Calculer</button>
 		<div id="nbKcal"></div>

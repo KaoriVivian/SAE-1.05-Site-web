@@ -3,6 +3,7 @@ window.addEventListener("DOMContentLoaded", function () {
     const vitesse = document.getElementById('vitesse'); // Inputs
     const temps = document.getElementById('temps'); // Inputs
     const poids = document.getElementById('poids'); // Inputs
+
     const btnCalculer = document.getElementById('btnCalculer'); // Button
     const nbKcal = document.getElementById('nbKcal'); // Div
     const nbMacarons = document.getElementById('nbMacarons'); // Div
@@ -11,14 +12,49 @@ window.addEventListener("DOMContentLoaded", function () {
     const error_indicator = document.getElementById('error_indicator');
     let bool_error;
 
-    //Calculer lorsque l'utilisateur appuis sur le button...
-    btnCalculer.addEventListener('click', function () {
-        CheckInputs();
-        Calculer();
-    });
+    // Default values whan pages load
+    let isTpsVisible = false
+    let isPdsVisible = false
+    
+    vitesse.addEventListener('change',function(){
+        const vitesseVal = Number(vitesse.value);
+        if (vitesseVal<=0){
+            error("Merci d'entrer une valeur positive et non égale a zéro");
+        }else if (0 < vVal < 8) {
+            error("Cette valeur ne correspond pas à une allure de course");
+        }else{
+            isTpsVisible = true;
+        }
+
+        if (isTpsVisible){
+            document.getElementById('tpsD').style.display = 'block';
+        }
+    })
+
+    temps.addEventListener('change',function(){
+        const tempsVal = Number(temps.value)
+        if (tempsVal<=0){
+            error("Merci d'entrer une valeur positive et non égale a zéro");
+        }else{
+            isPdsVisible = true
+        }
+
+        if (isPdsVisible){
+            document.getElementById('pdsD').style.display = 'block'
+        }
+    })
+
+    poids.addEventListener('change',function(){
+        const poidsVal = Number(poids.value)
+        if (poids <= 0){
+            error("Merci d'entrer une valeur positive et non égale à zéro")
+        }else{
+            calculer()
+        }
+    })
 
     /// TO-DO : arround values. Display images for each macarons.
-    function Calculer() {
+    function calculer() {
         let vitesseVal = Number(vitesse.value);
         let tempsVal = Number(temps.value);
         let poidsVal = Number(poids.value);
@@ -28,7 +64,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
         let macarons = (kcal / 100);
 
-        if (bool_error !== true) {
+        if (!bool_error) {
             nbKcal.innerHTML = kcal + " Kcal consommées.";
             nbMacarons.innerHTML = macarons + " macarons / calories consommées.";
         }
@@ -39,16 +75,6 @@ window.addEventListener("DOMContentLoaded", function () {
         }
 
     }
-
-    function CheckInputs() {
-        if (vitesse.value === '' || temps.value === '' || poids.value === '') {
-            error("Veuillez remplir les informations manquants.");
-            return;
-        } else {
-            hideError();
-        }
-    };
-
 
     function error(Message) {
         bool_error = true;
