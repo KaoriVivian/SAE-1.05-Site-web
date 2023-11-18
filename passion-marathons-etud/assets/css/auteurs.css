@@ -24,8 +24,7 @@ body {
     width: 100%;
 }
 
-#sections_droite,
-#sections_gauche {
+#section_droite, #section_gauche, #section_real, #section_bio {
     overflow: hidden;
     display: inline-block;
     width: 50%;
@@ -36,11 +35,11 @@ body {
     background-position-x: center;
 }
 
-#sections_droite {
+#section_gauche {
     background-image: url("./../images/auteurs/Viviane/Ozen.jpg");
 }
 
-#sections_gauche {
+#section_droite {
     background-image: url("./../images/auteurs/valorant.webp");
 }
 
@@ -49,4 +48,39 @@ body {
     height: 100%; 
     width: 100%;
     cursor: pointer;
+} 
+
+#section_bio
+{
+    color: black;
+}
+
+#section_bio>h1
+{
+    margin-top: 35%;
+    transform: translateY(-50%);
+}
+
+#section_bio>p
+{
+    margin-top: 50px;
+    display: inline-block;
+    width: 80%;
+}
+
+
+.realisations
+{
+    width: 100%;
+    height: 33.33%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: right;
+    background-position-x: center;
+    vertical-align: bottom;
+}
+.realisations a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
 }
