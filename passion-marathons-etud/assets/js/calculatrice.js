@@ -71,33 +71,44 @@ window.addEventListener("DOMContentLoaded", function () {
 
         let kcalMN = (vitesseVal * 3.5 * poidsVal) / 200;
         let kcal = kcalMN * tempsVal;
-        kcal = Math.round(kcal*1000)/1000
+        kcal = Math.round(kcal * 1000) / 1000
 
         let macarons = (kcal / 100);
-        macarons = Math.round(macarons*1000)/1000
-        console.log(macarons);
+        macarons = Math.round(macarons * 1000) / 1000
 
-        for(i = macarons; i > 1 ; i--)
-        {
-            macarons--;
-            nbMacarons.innerHTML += "<img src='./../assets/images/technique/macaron.png' alt='un grand macarons !' style='height: 30px; margin: 0 2.5px;'></img>";
-        }
+        console.log(macarons); // See the value of "macarons" before show the images.
 
-        if(macarons != 0 && macarons >= 0.5)
-        {
-            nbMacarons.innerHTML += "<img src='./../assets/images/technique/macaron-moitie.png' alt='une moitié de macarons !' style='height: 15px; margin: 2.5px 2.5px;'></img>";
-            macarons = macarons - 0.5;
-        }
+        if (macarons >= 0.5) {
+            for (i = macarons; i > 1; i--) {
+                macarons--;
+                nbMacarons.innerHTML += "<img src='./../assets/images/technique/macaron.png' alt='un grand macarons !' style='height: 30px; margin: 0 2.5px;'></img>";
+            }
 
-        if (!bool_error) {
-            nbKcal.innerHTML = kcal + " Kcal consommées.";
-            nbMacarons.innerHTML += " macarons / calories consommées.";
+            if (macarons != 0 && macarons >= 0.5) {
+                nbMacarons.innerHTML += "<img src='./../assets/images/technique/macaron-moitie.png' alt='une moitié de macarons !' style='height: 15px; margin: 2.5px 2.5px;'></img>";
+                macarons = macarons - 0.5;
+            }
+
+            if (!bool_error) {
+                nbKcal.innerHTML = kcal + " Kcal consommées.";
+                nbMacarons.innerHTML += " macarons / calories consommées.";
+            } else {
+                nbKcal.innerHTML = null;
+                nbMacarons.innerHTML = null;
+            }
+
         } else {
-            nbKcal.innerHTML = null;
-            nbMacarons.innerHTML = null;
+
+            if (!bool_error) {
+                nbKcal.innerHTML = kcal + " Kcal consommées.";
+                nbMacarons.innerHTML += macarons + " macarons / calories consommées.";
+            } else {
+                nbKcal.innerHTML = null;
+                nbMacarons.innerHTML = null;
+            }
         }
 
-        console.log(macarons);
+        console.log(macarons); // See the value of "macarons" after show the images.
 
     }
 
