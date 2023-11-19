@@ -20,37 +20,44 @@ window.addEventListener("DOMContentLoaded", function () {
     // Default values whan pages load
     let isTpsVisible = false
     let isPdsVisible = false
-    
-    vitesse.addEventListener("change",function(){
+
+    vitesse.addEventListener("change", function () {
         const vitesseVal = Number(vitesse.value);
-        if (vitesseVal<=0){
+        if (vitesseVal <= 0) {
             error("Merci d'entrer une valeur positive et non égale a zéro");
-        }else if (0 < vitesseVal && vitesseVal < 8) {
+        } else if (0 < vitesseVal && vitesseVal < 8) {
             error("Cette valeur ne correspond pas à une allure de course");
+        } else {
+            isTpsVisible = true;
         }
-        else{isTpsVisible = true;}
 
-        if (isTpsVisible) {document.getElementById('tpsD').style.display = 'inline-block';hideError();}
+        if (isTpsVisible) {
+            document.getElementById('tpsD').style.display = 'inline-block';
+            hideError();
+        }
     })
 
-    temps.addEventListener('change',function(){
+    temps.addEventListener('change', function () {
         const tempsVal = Number(temps.value)
-        if (tempsVal<=0){
+        if (tempsVal <= 0) {
             error("Merci d'entrer une valeur positive et non égale a zéro");
+        } else {
+            isPdsVisible = true
         }
-        else{isPdsVisible = true}
 
-        if (isPdsVisible){document.getElementById('pdsD').style.display = 'block';hideError();}
+        if (isPdsVisible) {
+            document.getElementById('pdsD').style.display = 'block';
+            hideError();
+        }
     })
 
-    poids.addEventListener('change',function(){
+    poids.addEventListener('change', function () {
         const poidsVal = Number(poids.value)
-        if (poidsVal <= 0){
+        if (poidsVal <= 0) {
             error("Merci d'entrer une valeur positive et non égale à zéro")
-        }
-        else{
+        } else {
             hideError()
-            calculer() 
+            calculer()
         }
     })
 
@@ -63,15 +70,15 @@ window.addEventListener("DOMContentLoaded", function () {
 
         let kcalMN = (vitesseVal * 3.5 * poidsVal) / 200;
         let kcal = kcalMN * tempsVal;
+        kcal = Math.round(kcal*1000)/1000
 
         let macarons = (kcal / 100);
+        macarons = Math.round(macarons*1000)/1000
 
         if (!bool_error) {
             nbKcal.innerHTML = kcal + " Kcal consommées.";
             nbMacarons.innerHTML = macarons + " macarons / calories consommées.";
-        }
-        else
-        {
+        } else {
             nbKcal.innerHTML = null;
             nbMacarons.innerHTML = null;
         }
