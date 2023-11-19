@@ -1,5 +1,6 @@
 window.addEventListener("DOMContentLoaded", function () {
-    console.log("calculatrice.js connected to " + document.documentURI)
+    console.log("calculatrice.js connected to " + document.documentURI);
+    console.log("calculation launched.");
     /// API
     const vitesse = document.getElementById('vitesse'); // Inputs
     const temps = document.getElementById('temps'); // Inputs
@@ -64,11 +65,20 @@ window.addEventListener("DOMContentLoaded", function () {
 
     /// TO-DO : arround values. Display images for each macarons.
     function calculer() {
-        console.log("calculation launched")
+        //START
+        console.log("Programme start.");
+        console.log("Setup [start]");
+
+        //SETUP
+        nbKcal.innerHTML = null;
+        nbMacarons.innerHTML = null;
         let vitesseVal = Number(vitesse.value);
         let tempsVal = Number(temps.value);
         let poidsVal = Number(poids.value);
+        console.log("Setup [done]");
 
+        //API
+        console.log("Share result...");
         let kcalMN = (vitesseVal * 3.5 * poidsVal) / 200;
         let kcal = kcalMN * tempsVal;
         kcal = Math.round(kcal * 1000) / 1000
@@ -108,7 +118,9 @@ window.addEventListener("DOMContentLoaded", function () {
             }
         }
 
+        // FINISH
         console.log(macarons); // See the value of "macarons" after show the images.
+        console.log("Programme finish.");
 
     }
 
