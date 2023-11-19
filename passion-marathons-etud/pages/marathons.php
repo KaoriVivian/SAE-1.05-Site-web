@@ -59,7 +59,6 @@
 						echo "<tr><td>". $tableau[0] ."<td>". $tableau[1] ."<td>". $tableau[2];
 					}
 					?>
-					<tr><td>29 mai 2024<td>Munnar Marathon <td>Inde
 				</tbody>
 			</table>
 		</div>
