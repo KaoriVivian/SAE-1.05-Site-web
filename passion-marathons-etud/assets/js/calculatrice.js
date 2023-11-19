@@ -1,13 +1,14 @@
 window.addEventListener("DOMContentLoaded", function () {
+    console.log("calculatrice.js connected to " + document.documentURI)
     /// API
     const vitesse = document.getElementById('vitesse'); // Inputs
     const temps = document.getElementById('temps'); // Inputs
     const poids = document.getElementById('poids'); // Inputs
 
     //Set a default value of the inputs
-    vitesse.value = ""
-    temps.value = ""
-    poids.value = ""
+    vitesse.value = null;
+    temps.value = null;
+    poids.value = null;
 
     const btnCalculer = document.getElementById('btnCalculer'); // Button
     const nbKcal = document.getElementById('nbKcal'); // Div
@@ -18,15 +19,15 @@ window.addEventListener("DOMContentLoaded", function () {
     let bool_error;
 
     // Default values whan pages load
-    let isTpsVisible = false
-    let isPdsVisible = false
+    let isTpsVisible = false;
+    let isPdsVisible = false;
 
     vitesse.addEventListener("change", function () {
         const vitesseVal = Number(vitesse.value);
         if (vitesseVal <= 0) {
             error("Merci d'entrer une valeur positive et non égale a zéro");
         } else if (0 < vitesseVal && vitesseVal < 8) {
-            error("Cette valeur ne correspond pas à une allure de course");
+            error("Cette valeur ne correspond pas à une allure de course, <br> veuillez entrer une nouvelle valeur.");
         } else {
             isTpsVisible = true;
         }
@@ -54,10 +55,10 @@ window.addEventListener("DOMContentLoaded", function () {
     poids.addEventListener('change', function () {
         const poidsVal = Number(poids.value)
         if (poidsVal <= 0) {
-            error("Merci d'entrer une valeur positive et non égale à zéro")
+            error("Merci d'entrer une valeur positive et non égale à zéro");
         } else {
-            hideError()
-            calculer()
+            hideError();
+            calculer();
         }
     })
 
@@ -74,14 +75,29 @@ window.addEventListener("DOMContentLoaded", function () {
 
         let macarons = (kcal / 100);
         macarons = Math.round(macarons*1000)/1000
+        console.log(macarons);
+
+        for(i = macarons; i > 1 ; i--)
+        {
+            macarons--;
+            nbMacarons.innerHTML += "<img src='./../assets/images/technique/macaron.png' alt='un grand macarons !' style='height: 30px; margin: 0 2.5px;'></img>";
+        }
+
+        if(macarons != 0 && macarons >= 0.5)
+        {
+            nbMacarons.innerHTML += "<img src='./../assets/images/technique/macaron-moitie.png' alt='une moitié de macarons !' style='height: 15px; margin: 2.5px 2.5px;'></img>";
+            macarons = macarons - 0.5;
+        }
 
         if (!bool_error) {
             nbKcal.innerHTML = kcal + " Kcal consommées.";
-            nbMacarons.innerHTML = macarons + " macarons / calories consommées.";
+            nbMacarons.innerHTML += " macarons / calories consommées.";
         } else {
             nbKcal.innerHTML = null;
             nbMacarons.innerHTML = null;
         }
+
+        console.log(macarons);
 
     }
 
