@@ -37,7 +37,7 @@ window.addEventListener("DOMContentLoaded", function () {
             document.getElementById('tpsD').style.display = 'inline-block';
             hideError();
         }
-    })
+    });
 
     temps.addEventListener('change', function () {
         const tempsVal = Number(temps.value)
@@ -51,7 +51,7 @@ window.addEventListener("DOMContentLoaded", function () {
             document.getElementById('pdsD').style.display = 'block';
             hideError();
         }
-    })
+    });
 
     poids.addEventListener('change', function () {
         const poidsVal = Number(poids.value)
@@ -61,7 +61,7 @@ window.addEventListener("DOMContentLoaded", function () {
             hideError();
             calculer();
         }
-    })
+    });
 
     /// TO-DO : arround values. Display images for each macarons.
     function calculer() {
@@ -89,8 +89,7 @@ window.addEventListener("DOMContentLoaded", function () {
         console.log(macarons); // See the value of "macarons" before show the images.
 
         if (macarons >= 0.5) {
-            for (i = macarons; i > 1; i--) {
-                macarons--;
+            for (macarons; macarons > 1; macarons--) {
                 nbMacarons.innerHTML += "<img src='./../assets/images/technique/macaron.png' alt='un grand macarons !' style='height: 30px; margin: 0 2.5px;'></img>";
             }
 
