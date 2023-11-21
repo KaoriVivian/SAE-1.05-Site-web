@@ -57,6 +57,8 @@ window.addEventListener("DOMContentLoaded", function () {
         const poidsVal = Number(poids.value)
         if (poidsVal <= 0) {
             error("Merci d'entrer une valeur positive et non égale à zéro");
+        } else if (poidsVal === 69){
+            document.getElementById('nice').style.display = 'block'
         } else {
             hideError();
             calculer();
@@ -87,7 +89,8 @@ window.addEventListener("DOMContentLoaded", function () {
         macarons = Math.round(macarons * 1000) / 1000
 
         console.log(macarons); // See the value of "macarons" before show the images.
-
+        
+        // 0.5,1,
         if (macarons >= 0.5) {
             for (i = macarons; i > 1; i--) {
                 macarons--;
