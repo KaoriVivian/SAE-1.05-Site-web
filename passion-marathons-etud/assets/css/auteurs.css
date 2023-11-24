@@ -22,6 +22,9 @@ body {
 #conteneur {
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 #section_droite, #section_gauche, #section_real, #section_bio {
@@ -37,10 +40,31 @@ body {
 
 #section_gauche {
     background-image: url("./../images/auteurs/Viviane/Ozen.jpg");
+    display: flex;
+    flex-direction: column;
+}
+
+#section_gauche
+{
+    padding-top: 30px;
 }
 
 #section_droite {
     background-image: url("./../images/auteurs/valorant.webp");
+    display: flex;
+    flex-direction: column;
+}
+
+#section_droite>h1
+{
+    display: inline-block;
+    order: 1;
+}
+
+.rs
+{
+    display: flex;
+    display: inline-block;
 }
 
 .clickable
