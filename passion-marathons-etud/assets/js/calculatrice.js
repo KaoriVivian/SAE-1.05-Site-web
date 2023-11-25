@@ -40,6 +40,10 @@ window.addEventListener("DOMContentLoaded", function () {
             document.getElementById('tpsD').style.display = 'inline-block';
             hideError();
         }
+
+        if (temps.value != "" && poids.value != ""){
+            calculer()
+        }
     });
 
     temps.addEventListener('change', function () {
@@ -55,6 +59,10 @@ window.addEventListener("DOMContentLoaded", function () {
             document.getElementById('pdsD').style.display = 'block';
             hideError();
         }
+
+        if (poids.value != "" && vitesse.value != ""){
+            calculer()
+        }
     });
 
     poids.addEventListener('change', function () {
@@ -62,7 +70,7 @@ window.addEventListener("DOMContentLoaded", function () {
         if (poidsVal <= 0) {
             error("Merci d'entrer une valeur positive et non égale à zéro");
         } else if (poidsVal === 69){
-            document.getElementById('nice').style.display = 'block';
+            document.getElementById('nice').style.display = 'block'; //Dans la culture populaire, le chiffre 69 faisant référence a la position sexuelle et est très humoristique, ceci est donc un easter egg :)
         } else if (poidsVal > 250){
             error("Merci d'entrer une valeur réaliste");
         }
@@ -98,14 +106,14 @@ window.addEventListener("DOMContentLoaded", function () {
         
         // 0.5,1,
         if (macarons >= 0.5) {
-            macaron(macarons,25,"Le macaron ultime")
-            macaron(macarons,10,"Le macaron céleste")
-            macaron(macarons,5,"Le roi des macarons")
-            macaron(macarons,2,"Le double macaron")
-            macaron(macarons,1,"Le macaron classique")
+            macarons -= macaron(macarons,25,"Le macaron ultime")
+            macarons -= macaron(macarons,10,"Le macaron céleste")
+            macarons -= macaron(macarons,5,"Le roi des macarons")
+            macarons -= macaron(macarons,2,"Le double macaron")
+            macarons -= macaron(macarons,1,"Le macaron classique")
 
             if (macarons != 0 && macarons >= 0.5) {
-                nbMacarons.innerHTML += "<img src='./../assets/images/technique/macaron0.5.png' alt='Le demi macaron' style='height: 15px; margin: 2.5px 2.5px;'></img>";
+                nbMacarons.innerHTML += "<img src='./../assets/images/technique/macaron0.5.png' alt='Le demi macaron' style='height: 50px; margin: 2.5px 2.5px;'></img>";
                 macarons = macarons - 0.5;
             }
 
@@ -135,9 +143,12 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     function macaron(mac,n,alt){
-        for (mac; mac > n;mac-n){
-            nbMacarons.innerHTML += "<img src='./../assets/images/technique/macaron"+n+".png' alt='"+alt+"' style='height: 30px; margin: 0 2.5px;'></img>";
+        a = 0
+        for (mac; mac > n;mac-=n){
+            nbMacarons.innerHTML += "<img src='./../assets/images/technique/macaron"+n+".png' alt='"+alt+"' style='height: 50px; margin: 0 2.5px;'></img>";
+            a+=n
         }
+        return a
     }
     function error(Message) {
         bool_error = true;
