@@ -29,9 +29,12 @@ window.addEventListener("DOMContentLoaded", function () {
             error("Merci d'entrer une valeur positive et non égale a zéro");
         } else if (0 < vitesseVal && vitesseVal < 8) {
             error("Cette valeur ne correspond pas à une allure de course, <br> veuillez entrer une nouvelle valeur.");
-        } else {
-            isTpsVisible = true;
+        } else if (vitesseVal > 50){
+            error("Merci d'enter une valeur réaliste")
         }
+        
+        isTpsVisible = true;
+
 
         if (isTpsVisible) {
             document.getElementById('tpsD').style.display = 'inline-block';
@@ -43,9 +46,10 @@ window.addEventListener("DOMContentLoaded", function () {
         const tempsVal = Number(temps.value)
         if (tempsVal <= 0) {
             error("Merci d'entrer une valeur positive et non égale a zéro");
-        } else {
-            isPdsVisible = true
-        }
+        } else if (tempsVal < 360){
+            error("Merci d'entrer une valeur réaliste")
+        } 
+        isPdsVisible = true
 
         if (isPdsVisible) {
             document.getElementById('pdsD').style.display = 'block';
@@ -58,11 +62,13 @@ window.addEventListener("DOMContentLoaded", function () {
         if (poidsVal <= 0) {
             error("Merci d'entrer une valeur positive et non égale à zéro");
         } else if (poidsVal === 69){
-            document.getElementById('nice').style.display = 'block'
-        } else {
-            hideError();
-            calculer();
+            document.getElementById('nice').style.display = 'block';
+        } else if (poidsVal > 250){
+            error("Merci d'entrer une valeur réaliste");
         }
+
+        hideError();
+        calculer();
     });
 
     /// TO-DO : arround values. Display images for each macarons.
