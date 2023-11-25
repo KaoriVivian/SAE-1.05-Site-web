@@ -98,12 +98,14 @@ window.addEventListener("DOMContentLoaded", function () {
         
         // 0.5,1,
         if (macarons >= 0.5) {
-            for (macarons; macarons > 1; macarons--) {
-                nbMacarons.innerHTML += "<img src='./../assets/images/technique/macaron.png' alt='un grand macarons !' style='height: 30px; margin: 0 2.5px;'></img>";
-            }
+            macaron(macarons,25,"Le macaron ultime")
+            macaron(macarons,10,"Le macaron céleste")
+            macaron(macarons,5,"Le roi des macarons")
+            macaron(macarons,2,"Le double macaron")
+            macaron(macarons,1,"Le macaron classique")
 
             if (macarons != 0 && macarons >= 0.5) {
-                nbMacarons.innerHTML += "<img src='./../assets/images/technique/macaron-moitie.png' alt='une moitié de macarons !' style='height: 15px; margin: 2.5px 2.5px;'></img>";
+                nbMacarons.innerHTML += "<img src='./../assets/images/technique/macaron0.5.png' alt='Le demi macaron' style='height: 15px; margin: 2.5px 2.5px;'></img>";
                 macarons = macarons - 0.5;
             }
 
@@ -132,6 +134,11 @@ window.addEventListener("DOMContentLoaded", function () {
 
     }
 
+    function macaron(mac,n,alt){
+        for (mac; mac > n;mac-n){
+            nbMacarons.innerHTML += "<img src='./../assets/images/technique/macaron"+n+".png' alt='"+alt+"' style='height: 30px; margin: 0 2.5px;'></img>";
+        }
+    }
     function error(Message) {
         bool_error = true;
         error_indicator.style.display = 'contents';
