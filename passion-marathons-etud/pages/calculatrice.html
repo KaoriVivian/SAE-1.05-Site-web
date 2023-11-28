@@ -53,37 +53,47 @@
 		<div class="titre_section">
 			<h2>La calculatrice de Passion Marathons</h2>
 		</div>
-		<div>
+		<div id="objectif-calculatrice">
 			<blockquote>
 				Un Objectif : Votre Santé
 			</blockquote>
 			<p>
-				Chez passions marathons nous pensons qu'il est indispensable d'avoir un suivi de santé le plus fiable possible. 
-				C'est pour cela que nous avons mis en place <strong>une calculatrice</strong> pour mesurer combien de kCal vous
-				avez dépensé durant un marathon ou n'importe quelle course. Nous avons aussi pris la liberté d'ajouter un peu 
-				de gourmandise à cette calculatrice ! En effet, un calcul en marcarons dépensés sera aussi effectué, plus vous aurez
-				consommés de macarons, plus des petites images rigolotes seront visibles. Alors dépensez vous le plus possible 
+				Chez passions marathons nous pensons qu'il est indispensable d'avoir un suivi de santé le plus fiable
+				possible.
+				C'est pour cela que nous avons mis en place <strong>une calculatrice</strong> pour mesurer combien de
+				kCal vous
+				avez dépensé durant un marathon ou n'importe quelle course. Nous avons aussi pris la liberté d'ajouter
+				un peu
+				de gourmandise à cette calculatrice ! En effet, un calcul en marcarons dépensés sera aussi effectué,
+				plus vous aurez
+				consommés de macarons, plus des petites images rigolotes seront visibles. Alors dépensez vous le plus
+				possible
 				pour que vous ayez les plus beaux macarons disponibles !
 			</p>
-			<p>Le fonctionnement de la calculatrice est simple, vous n'avez qu'à entrer la vitesse moyenne de votre course, le temps que vous avez pris et votre poids et le calcul se fera automatiquement ! </p>
+			<p>Le fonctionnement de la calculatrice est simple, vous n'avez qu'à entrer la vitesse moyenne de votre
+				course, le temps que vous avez pris et votre poids et le calcul se fera automatiquement ! </p>
+
+			<br>
+
+			<button id="btnStart">Commencer</button>
 		</div>
 
-		<br>
+		<div id="body-calculatrice" style="display: none;">
+			<div id="vitD">
+				<p>Vitesse: </p>
+				<input type="text" id="vitesse" placeholder="Vitesse en Km/h...">
+			</div>
+			<div id="tpsD" style="display: none;">
+				<p>Temps (Minutes): </p>
+				<input type="text" id="temps">
+			</div>
+			<div id="pdsD" style="display: none;">
+				<p>Poids (Kg): </p>
+				<input type="text" id="poids">
+			</div>
+		</div>
 
-		<h1>Calculatrice</h1>
-		<div id="vitD">
-			<p>Vitesse (Km/h): </p>
-			<input type="text" id="vitesse">
-		</div>
-		<div id="tpsD" style="display: none;">
-			<p>Temps (Minutes): </p>
-			<input type="text" id="temps">
-		</div>
-		<div id="pdsD" style="display: none;">
-			<p>Poids (Kg): </p>
-			<input type="text" id="poids">
-		</div>
-		
+
 		<br>
 		<img src="./../assets/images/technique/noice-nice.gif" alt="Nice Weight" style="display: none;" id="nice">
 		<div id="nbKcal"></div>
@@ -97,7 +107,7 @@
 		<a href="./pages/auteurs.html">Les auteurs du site </a>
 		<a href="#bloc_principal">Haut de la page</a>
 	</footer>
-	
+
 	<script src="../assets/js/calculatrice.js"></script>
 </body>
 

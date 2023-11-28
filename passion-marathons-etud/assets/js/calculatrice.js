@@ -5,15 +5,16 @@ window.addEventListener("DOMContentLoaded", function () {
     const vitesse = document.getElementById('vitesse'); // Inputs
     const temps = document.getElementById('temps'); // Inputs
     const poids = document.getElementById('poids'); // Inputs
+    const nbKcal = document.getElementById('nbKcal'); // Div
+    const nbMacarons = document.getElementById('nbMacarons'); // Div
+    const ObjectifCalc = document.getElementById('objectif-calculatrice');
+    const BodyCalc = document.getElementById('body-calculatrice');
+    const btnStart = document.getElementById('btnStart');
 
     //Set a default value of the inputs
     vitesse.value = null;
     temps.value = null;
     poids.value = null;
-
-    const btnCalculer = document.getElementById('btnCalculer'); // Button
-    const nbKcal = document.getElementById('nbKcal'); // Div
-    const nbMacarons = document.getElementById('nbMacarons'); // Div
 
     /// HELPFUL
     const error_indicator = document.getElementById('error_indicator');
@@ -22,6 +23,14 @@ window.addEventListener("DOMContentLoaded", function () {
     // Default values whan pages load
     let isTpsVisible = false;
     let isPdsVisible = false;
+    BodyCalc.style.display = "none";
+    ObjectifCalc.style.display = "contents";
+
+
+    btnStart.addEventListener('click', function()
+    {
+        start();
+    });
 
     vitesse.addEventListener("change", function () {
         const vitesseVal = Number(vitesse.value);
@@ -159,5 +168,11 @@ window.addEventListener("DOMContentLoaded", function () {
     function hideError() {
         bool_error = false;
         error_indicator.style.display = 'none';
+    }
+
+    function start()
+    {
+        ObjectifCalc.style.display = "none";
+        BodyCalc.style.display = "contents";
     }
 })
