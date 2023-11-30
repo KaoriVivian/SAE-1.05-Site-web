@@ -10,7 +10,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald&display=swap" rel="stylesheet"> 
 </head>
 <body>
-	<div id="bloc_principal">
+	<div id="mainBloc">
 
 		<header>
 			<img src="./../assets/images/banniere.png" alt="Passion Marathons - Agence spécialisées dans les marathons">
@@ -43,8 +43,8 @@
 			</a>
 		</nav>
 		
-		<div id="liste_marathons">
-			<h1 class="titre_page_secondaire">Marathons 2024</h1>
+		<div id="marathonList">
+			<h1 class="titleList">Marathons 2024</h1>
 			<table>
 				<thead>
 					<tr><th>Date<th>Marathon<th>Ville
@@ -66,7 +66,7 @@
 	<footer>
 		<p>Copyright : Passion Marathons 2015/2023 - contac@passionmarathons.com</p>
 		<a href="#">Les auteurs du site </a>
-		<a href="#bloc_principal">Haut de la page</a>
+		<a href="#mainBloc">Haut de la page</a>
 	</footer>
 </body>
 </html>

@@ -19,7 +19,7 @@
 			<p class="button">Un Coaching personnalisé en nutrition</p>
 		</div>
 	</div>
-	<div id="bloc_principal">
+	<div id="mainBloc">
 		<header>
 			<img src="./assets/images/banniere.png" alt="Passion Marathons - Agence spécialisées dans les marathons">
 			<p>Aller au bout de soi-même</p>
@@ -50,7 +50,7 @@
 				calculette
 			</a>
 		</nav>
-		<div id="alaune">
+		<div id="featured">
 			<img src="./assets/images/home/alaune/new-york.jpg" alt="Ligne d'arrivée du marathon de New York">
 			<div>
 				<p>By Greg / Juillet 2023</p>
@@ -59,7 +59,7 @@
 			</div>
 		</div>
 		<section id="articles">
-			<div class="titre_section">
+			<div class="sectionTitle">
 				<h2>Nos derniers articles</h2>
 			</div>
 			<div>
@@ -99,7 +99,7 @@
 			</div>
 		</section>
 		<section id="temoignage" >
-			<div class="titre_section">
+			<div class="sectionTitle">
 				<h2>Sur la ligne d'arrivée</h2>
 			</div>
 			<div>
@@ -117,7 +117,7 @@
 			</div>
 		</section>
 		<section id="instagram">
-			<div class="titre_section">
+			<div class="sectionTitle">
 				<h2>Passion Marathons sur Instagram</h2>
 			</div>
 			<div>
@@ -152,7 +152,7 @@
 	<footer>
 		<p>Copyright : Passion Marathons 2015/2023 - contac@passionmarathons.com</p>
 		<a href="./pages/auteurs.html">Les auteurs du site </a>
-		<a href="#bloc_principal">Haut de la page</a>
+		<a href="#mainBloc">Haut de la page</a>
 	</footer>
 </body>
 </html>
