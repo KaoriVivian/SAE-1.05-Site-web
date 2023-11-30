@@ -2,94 +2,95 @@ window.addEventListener("DOMContentLoaded", function () {
     console.log("calculatrice.js connected to " + document.documentURI);
     console.log("calculation launched.");
     /// API
-    const vitesse = document.getElementById('vitesse'); // Inputs
-    const temps = document.getElementById('temps'); // Inputs
-    const poids = document.getElementById('poids'); // Inputs
+    const speed = document.getElementById('speed'); // Inputs
+    const time = document.getElementById('time'); // Inputs
+    const weight = document.getElementById('weight'); // Inputs
     const nbKcal = document.getElementById('nbKcal'); // Div
     const nbMacarons = document.getElementById('nbMacarons'); // Div
-    const ObjectifCalc = document.getElementById('objectif-calculatrice');
-    const BodyCalc = document.getElementById('body-calculatrice');
+    const calculatorGoals = document.getElementById('calculatorGoals');
+    const calcBody = document.getElementById('calculatorBody');
     const btnStart = document.getElementById('btnStart');
 
     //Set a default value of the inputs
-    vitesse.value = null;
-    temps.value = null;
-    poids.value = null;
+    speed.value = null;
+    time.value = null;
+    weight.value = null;
 
     /// HELPFUL
     const error_indicator = document.getElementById('error_indicator');
     let bool_error;
 
     // Default values whan pages load
-    let isTpsVisible = false;
-    let isPdsVisible = false;
-    BodyCalc.style.display = "none";
-    ObjectifCalc.style.display = "contents";
+    let isTimeVisible = false;
+    let isWgtVisible = false;
+    calcBody.style.display = "none";
+    calculatorGoals.style.display = "contents";
 
 
     btnStart.addEventListener('click', function()
     {
-        start();
+        calculatorGoals.style.display = "none";
+        calcBody.style.display = "contents";
     });
 
-    vitesse.addEventListener("change", function () {
-        const vitesseVal = Number(vitesse.value);
-        if (vitesseVal <= 0) {
+    speed.addEventListener("change", function () {
+        const spdValue = Number(speed.value);
+        if (spdValue <= 0) {
             error("Merci d'entrer une valeur positive et non égale a zéro");
-        } else if (0 < vitesseVal && vitesseVal < 8) {
+        } else if (0 < spdValue && spdValue < 8) {
             error("Cette valeur ne correspond pas à une allure de course, <br> veuillez entrer une nouvelle valeur.");
-        } else if (vitesseVal > 50){
+        } else if (spdValue > 50){
             error("Merci d'enter une valeur réaliste")
         }
         
-        isTpsVisible = true;
+        isTimeVisible = true;
 
 
-        if (isTpsVisible) {
+        if (isTimeVisible) {
             document.getElementById('tpsD').style.display = 'inline-block';
             hideError();
         }
 
-        if (temps.value != "" && poids.value != ""){
-            calculer()
+        if (time.value != "" && weight.value != ""){
+            calculation()
         }
     });
 
-    temps.addEventListener('change', function () {
-        const tempsVal = Number(temps.value)
-        if (tempsVal <= 0) {
+    time.addEventListener('change', function () {
+        const timeValue = Number(time.value)
+        if (timeValue <= 0) {
             error("Merci d'entrer une valeur positive et non égale a zéro");
-        } else if (tempsVal < 360){
+        } else if (timeValue < 360){
             error("Merci d'entrer une valeur réaliste")
         } 
-        isPdsVisible = true
+        isWgtVisible = true
 
-        if (isPdsVisible) {
+        if (isWgtVisible) {
             document.getElementById('pdsD').style.display = 'block';
             hideError();
         }
 
-        if (poids.value != "" && vitesse.value != ""){
-            calculer()
+        if (weight.value != "" && speed.value != ""){
+            calculation()
         }
     });
 
-    poids.addEventListener('change', function () {
-        const poidsVal = Number(poids.value)
-        if (poidsVal <= 0) {
+    weight.addEventListener('change', function () {
+        const wgtValue = Number(weight.value)
+        if (wgtValue <= 0) {
             error("Merci d'entrer une valeur positive et non égale à zéro");
-        } else if (poidsVal === 69){
+        } else if (wgtValue === 69){
             document.getElementById('nice').style.display = 'block'; //Dans la culture populaire, le chiffre 69 faisant référence a la position sexuelle et est très humoristique, ceci est donc un easter egg :)
-        } else if (poidsVal > 250){
+        } else if (wgtValue > 250){
             error("Merci d'entrer une valeur réaliste");
         }
 
         hideError();
-        calculer();
+        calculation();
     });
 
     /// TO-DO : arround values. Display images for each macarons.
-    function calculer() {
+    function calculation() {
         //START
         console.log("Programme start.");
         console.log("Setup [start]");
@@ -97,15 +98,15 @@ window.addEventListener("DOMContentLoaded", function () {
         //SETUP
         nbKcal.innerHTML = null;
         nbMacarons.innerHTML = null;
-        let vitesseVal = Number(vitesse.value);
-        let tempsVal = Number(temps.value);
-        let poidsVal = Number(poids.value);
+        let spdValue = Number(speed.value);
+        let timeValue = Number(time.value);
+        let wgtValue = Number(weight.value);
         console.log("Setup [done]");
 
         //API
         console.log("Share result...");
-        let kcalMN = (vitesseVal * 3.5 * poidsVal) / 200;
-        let kcal = kcalMN * tempsVal;
+        let kcalMN = (spdValue * 3.5 * wgtValue) / 200;
+        let kcal = kcalMN * timeValue;
         kcal = Math.round(kcal * 1000) / 1000
 
         let macarons = (kcal / 100);
@@ -113,7 +114,6 @@ window.addEventListener("DOMContentLoaded", function () {
 
         console.log(macarons); // See the value of "macarons" before show the images.
         
-        // 0.5,1,
         if (macarons >= 0.5) {
             macarons -= macaron(macarons,25,"Le macaron ultime")
             macarons -= macaron(macarons,10,"Le macaron céleste")
@@ -146,18 +146,17 @@ window.addEventListener("DOMContentLoaded", function () {
         }
 
         // FINISH
-        console.log(macarons); // See the value of "macarons" after show the images.
         console.log("Programme finish.");
 
     }
 
     function macaron(mac,n,alt){
-        a = 0
+        removeMac = 0
         for (mac; mac > n;mac-=n){
             nbMacarons.innerHTML += "<img src='./../assets/images/technique/macaron"+n+".png' alt='"+alt+"' style='height: 50px; margin: 0 2.5px;'></img>";
-            a+=n
+            removeMac+=n
         }
-        return a
+        return removeMac
     }
     function error(Message) {
         bool_error = true;
@@ -170,9 +169,4 @@ window.addEventListener("DOMContentLoaded", function () {
         error_indicator.style.display = 'none';
     }
 
-    function start()
-    {
-        ObjectifCalc.style.display = "none";
-        BodyCalc.style.display = "contents";
-    }
 })
