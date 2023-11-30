@@ -1,42 +1,42 @@
 window.addEventListener("DOMContentLoaded",function(){
     //Buttons
-    const btnAvant = document.getElementById("avant");
-    const btnPendant = document.getElementById("pendant");
-    const btnApres = document.getElementById("apres");
+    const beforeBtn = document.getElementById("before");
+    const duringBtn = document.getElementById("during");
+    const afterBtn = document.getElementById("after");
 
     //Articles
-    const articleAvant = document.getElementById("avantArticle");
-    const articlePendant = document.getElementById("pendantArticle");
-    const articleApres = document.getElementById("apresArticle");
+    const articleBefore = document.getElementById("avantArticle");
+    const articleDuring = document.getElementById("pendantArticle");
+    const articleAfter = document.getElementById("apresArticle");
 
-    btnAvant.addEventListener('click',function(){
-        btnAvant.classList.add("btnSelected");
-        btnPendant.classList.remove("btnSelected");
-        btnApres.classList.remove("btnSelected");
+    beforeBtn.addEventListener('click',function(){
+        beforeBtn.classList.add("btnSelected");
+        duringBtn.classList.remove("btnSelected");
+        afterBtn.classList.remove("btnSelected");
 
-        console.log("avant");
+        console.log("before");
         ShowArticle('block', 'none', 'none');
     })
-    btnPendant.addEventListener('click',function(){
-        btnAvant.classList.remove("btnSelected");
-        btnPendant.classList.add("btnSelected");
-        btnApres.classList.remove("btnSelected");
-        console.log("pendant");
+    duringBtn.addEventListener('click',function(){
+        beforeBtn.classList.remove("btnSelected");
+        duringBtn.classList.add("btnSelected");
+        afterBtn.classList.remove("btnSelected");
+        console.log("during");
         ShowArticle('none', 'block', 'none');
     })
-    btnApres.addEventListener('click',function(){
-        btnAvant.classList.remove("btnSelected");
-        btnPendant.classList.remove("btnSelected");
-        btnApres.classList.add("btnSelected");
-        console.log("apres");
+    afterBtn.addEventListener('click',function(){
+        beforeBtn.classList.remove("btnSelected");
+        duringBtn.classList.remove("btnSelected");
+        afterBtn.classList.add("btnSelected");
+        console.log("after");
         ShowArticle('none', 'none', 'block');
     })
 
-    function ShowArticle(avant, pendant, apres)
+    function ShowArticle(before, during, after)
     {
-        articleAvant.style.display = avant;
-        articlePendant.style.display = pendant;
-        articleApres.style.display = apres;
+        articleBefore.style.display = before;
+        articleDuring.style.display = during;
+        articleAfter.style.display = after;
     }
 
 })
