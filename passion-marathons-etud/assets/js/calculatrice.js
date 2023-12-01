@@ -27,61 +27,63 @@ window.addEventListener("DOMContentLoaded", function () {
     calculatorGoals.style.display = "contents";
 
 
-    btnStart.addEventListener('click', function()
-    {
+    btnStart.addEventListener('click', function () {
         calculatorGoals.style.display = "none";
         calcBody.style.display = "contents";
     });
 
     speed.addEventListener("change", function () {
-        const spdValue = Number(speed.value);
+        let spdValue = Number(speed.value);
+
+        console.log("Speed value : " + spdValue);
+
         if (spdValue <= 0) {
             error("Merci d'entrer une valeur positive et non égale a zéro");
         } else if (0 < spdValue && spdValue < 8) {
             error("Cette valeur ne correspond pas à une allure de course, <br> veuillez entrer une nouvelle valeur.");
-        } else if (spdValue > 50){
+        } else if (spdValue > 50) {
             error("Merci d'enter une valeur réaliste")
         }
-        
+
         isTimeVisible = true;
 
 
         if (isTimeVisible) {
-            document.getElementById('tpsD').style.display = 'inline-block';
+            document.getElementById('timeD').style.display = 'inline-block';
             hideError();
         }
 
-        if (time.value != "" && weight.value != ""){
-            calculation()
+        if (time.value != "" && weight.value != "") {
+            calculation();
         }
     });
 
     time.addEventListener('change', function () {
-        const timeValue = Number(time.value)
+        let timeValue = Number(time.value)
         if (timeValue <= 0) {
             error("Merci d'entrer une valeur positive et non égale a zéro");
-        } else if (timeValue < 360){
+        } else if (timeValue < 360) {
             error("Merci d'entrer une valeur réaliste")
-        } 
+        }
         isWgtVisible = true
 
         if (isWgtVisible) {
-            document.getElementById('pdsD').style.display = 'block';
+            document.getElementById('wgtD').style.display = 'block';
             hideError();
         }
 
-        if (weight.value != "" && speed.value != ""){
+        if (weight.value != "" && speed.value != "") {
             calculation()
         }
     });
 
     weight.addEventListener('change', function () {
-        const wgtValue = Number(weight.value)
+        let wgtValue = Number(weight.value)
         if (wgtValue <= 0) {
             error("Merci d'entrer une valeur positive et non égale à zéro");
-        } else if (wgtValue === 69){
+        } else if (wgtValue === 69) {
             document.getElementById('nice').style.display = 'block'; //Dans la culture populaire, le chiffre 69 faisant référence a la position sexuelle et est très humoristique, ceci est donc un easter egg :)
-        } else if (wgtValue > 250){
+        } else if (wgtValue > 250) {
             error("Merci d'entrer une valeur réaliste");
         }
 
@@ -113,13 +115,13 @@ window.addEventListener("DOMContentLoaded", function () {
         macarons = Math.round(macarons * 1000) / 1000
 
         console.log(macarons); // See the value of "macarons" before show the images.
-        
+
         if (macarons >= 0.5) {
-            macarons -= macaron(macarons,25,"Le macaron ultime")
-            macarons -= macaron(macarons,10,"Le macaron céleste")
-            macarons -= macaron(macarons,5,"Le roi des macarons")
-            macarons -= macaron(macarons,2,"Le double macaron")
-            macarons -= macaron(macarons,1,"Le macaron classique")
+            macarons -= macaron(macarons, 25, "Le macaron ultime");
+            macarons -= macaron(macarons, 10, "Le macaron céleste");
+            macarons -= macaron(macarons, 5, "Le roi des macarons");
+            macarons -= macaron(macarons, 2, "Le double macaron");
+            macarons -= macaron(macarons, 1, "Le macaron classique");
 
             if (macarons != 0 && macarons >= 0.5) {
                 nbMacarons.innerHTML += "<img src='./../assets/images/technique/macaron0.5.png' alt='Le demi macaron' style='height: 50px; margin: 2.5px 2.5px;'></img>";
@@ -150,14 +152,15 @@ window.addEventListener("DOMContentLoaded", function () {
 
     }
 
-    function macaron(mac,n,alt){
+    function macaron(maca, num, alt) {
         removeMac = 0
-        for (mac; mac > n;mac-=n){
-            nbMacarons.innerHTML += "<img src='./../assets/images/technique/macaron"+n+".png' alt='"+alt+"' style='height: 50px; margin: 0 2.5px;'></img>";
-            removeMac+=n
+        for (maca; maca > num; maca -= num) {
+            nbMacarons.innerHTML += "<img src='./../assets/images/technique/macaron" + num + ".png' alt='" + alt + "' style='height: 50px; margin: 0 2.5px;'></img>";
+            removeMac += num
         }
-        return removeMac
+        return removeMac;
     }
+
     function error(Message) {
         bool_error = true;
         error_indicator.style.display = 'contents';
