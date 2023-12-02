@@ -39,41 +39,61 @@ window.addEventListener("DOMContentLoaded", function () {
 
         if (spdValue <= 0) {
             error("Merci d'entrer une valeur positive et non égale a zéro");
+            isTimeVisible = false;
         } else if (0 < spdValue && spdValue < 8) {
             error("Cette valeur ne correspond pas à une allure de course, <br> veuillez entrer une nouvelle valeur.");
+            isTimeVisible = false;
         } else if (spdValue > 50) {
             error("Merci d'enter une valeur réaliste")
+            isTimeVisible = false;
         }
-
-        isTimeVisible = true;
+        else
+        {
+            isTimeVisible = true;
+        }
 
 
         if (isTimeVisible) {
             document.getElementById('timeD').style.display = 'inline-block';
             hideError();
         }
+        else
+        {
+            document.getElementById('timeD').style.display = 'none';
+            document.getElementById('wgtD').style.display = 'none';
+        }
 
         if (time.value != "" && weight.value != "") {
             calculation();
         }
+
     });
 
     time.addEventListener('change', function () {
         let timeValue = Number(time.value)
         if (timeValue <= 0) {
+            isWgtVisible = false;
             error("Merci d'entrer une valeur positive et non égale a zéro");
-        } else if (timeValue < 360) {
-            error("Merci d'entrer une valeur réaliste")
+        } else if (timeValue > 360) {
+            error("Merci d'entrer une valeur réaliste");
+            isWgtVisible = false;
         }
-        isWgtVisible = true
-
+        else
+        {
+            isWgtVisible = true;
+        }
+        
         if (isWgtVisible) {
             document.getElementById('wgtD').style.display = 'block';
             hideError();
         }
+        else
+        {
+            document.getElementById('wgtD').style.display = 'none';
+        }
 
         if (weight.value != "" && speed.value != "") {
-            calculation()
+            calculation();
         }
     });
 
