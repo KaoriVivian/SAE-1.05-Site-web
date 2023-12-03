@@ -46,9 +46,7 @@ window.addEventListener("DOMContentLoaded", function () {
         } else if (spdValue > 50) {
             error("Merci d'enter une valeur réaliste")
             isTimeVisible = false;
-        }
-        else
-        {
+        } else {
             isTimeVisible = true;
         }
 
@@ -56,9 +54,7 @@ window.addEventListener("DOMContentLoaded", function () {
         if (isTimeVisible) {
             document.getElementById('timeD').style.display = 'inline-block';
             hideError();
-        }
-        else
-        {
+        } else {
             document.getElementById('timeD').style.display = 'none';
             document.getElementById('wgtD').style.display = 'none';
         }
@@ -77,18 +73,14 @@ window.addEventListener("DOMContentLoaded", function () {
         } else if (timeValue > 360) {
             error("Merci d'entrer une valeur réaliste");
             isWgtVisible = false;
-        }
-        else
-        {
+        } else {
             isWgtVisible = true;
         }
-        
+
         if (isWgtVisible) {
             document.getElementById('wgtD').style.display = 'block';
             hideError();
-        }
-        else
-        {
+        } else {
             document.getElementById('wgtD').style.display = 'none';
         }
 
@@ -142,11 +134,7 @@ window.addEventListener("DOMContentLoaded", function () {
             macarons -= macaron(macarons, 5, "Le roi des macarons");
             macarons -= macaron(macarons, 2, "Le double macaron");
             macarons -= macaron(macarons, 1, "Le macaron classique");
-
-            if (macarons != 0 && macarons >= 0.5) {
-                nbMacarons.innerHTML += "<img src='./../assets/images/technique/macaron0.5.png' alt='Le demi macaron' style='height: 50px; margin: 2.5px 2.5px;'></img>";
-                macarons = macarons - 0.5;
-            }
+            macarons -= macaron(macarons, 0.5, "La moitié d'un macaron classique");
 
             if (!bool_error) {
                 nbKcal.innerHTML = kcal + " Kcal consommées.";
@@ -174,10 +162,13 @@ window.addEventListener("DOMContentLoaded", function () {
 
     function macaron(maca, num, alt) {
         removeMac = 0
-        for (maca; maca > num; maca -= num) {
-            nbMacarons.innerHTML += "<img src='./../assets/images/technique/macaron" + num + ".png' alt='" + alt + "' style='height: 50px; margin: 0 2.5px;'></img>";
-            removeMac += num
+        if (maca > 0) {
+            for (maca; maca > num; maca -= num) {
+                nbMacarons.innerHTML += "<div class='tooltip'><img src='./../assets/images/technique/macaron" + num + ".png' alt='" + alt + "' style='height: 50px; margin: 0 2.5px;'></img><span class='tooltiptext'>" + num + "</span></div>";
+                removeMac += num
+            }
         }
+
         return removeMac;
     }
 
