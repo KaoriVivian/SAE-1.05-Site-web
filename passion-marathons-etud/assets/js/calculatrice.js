@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", function () {
     console.log("calculatrice.js connected to " + document.documentURI);
-    console.log("calculation launched.");
+
     /// API
     const speed = document.getElementById('speed'); // Inputs
     const time = document.getElementById('time'); // Inputs
@@ -47,7 +47,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
 
         if (isTimeVisible) {
-            document.getElementById('tpsD').style.display = 'inline-block';
+            document.getElementById('timeD').style.display = 'inline-block';
             hideError();
         }
 
@@ -66,7 +66,7 @@ window.addEventListener("DOMContentLoaded", function () {
         isWgtVisible = true
 
         if (isWgtVisible) {
-            document.getElementById('pdsD').style.display = 'block';
+            document.getElementById('wgtD').style.display = 'block';
             hideError();
         }
 
@@ -122,7 +122,11 @@ window.addEventListener("DOMContentLoaded", function () {
             macarons -= macaron(macarons,1,"Le macaron classique")
 
             if (macarons != 0 && macarons >= 0.5) {
-                nbMacarons.innerHTML += "<img src='./../assets/images/technique/macaron0.5.png' alt='Le demi macaron' style='height: 50px; margin: 2.5px 2.5px;'></img>";
+                nbMacarons.innerHTML += 
+                "<div class'tooltip'>"+
+                    "<img src='./../assets/images/technique/macaron0.5.png' alt='Le demi macaron' style='height: 50px; margin: 2.5px 2.5px;'></img>"+
+                    "<span class='tooltiptext'> Le demi macaron. Valeur : 0.5 macaron</span>"+
+            "</div>";
                 macarons = macarons - 0.5;
             }
 
@@ -153,7 +157,11 @@ window.addEventListener("DOMContentLoaded", function () {
     function macaron(mac,n,alt){
         removeMac = 0
         for (mac; mac > n;mac-=n){
-            nbMacarons.innerHTML += "<img src='./../assets/images/technique/macaron"+n+".png' alt='"+alt+"' style='height: 50px; margin: 0 2.5px;'></img>";
+            nbMacarons.innerHTML += 
+            "<div class'tooltip'>"+
+                "<img src='./../assets/images/technique/macaron"+n+".png' alt='"+alt+"' style='height: 50px; margin: 0 2.5px;'></img>"+
+                "<span class='tooltiptext'>"+alt+" Valeur : "+n+" macarons</span>"+
+            "</div>";
             removeMac+=n
         }
         return removeMac
