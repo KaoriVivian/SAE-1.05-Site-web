@@ -124,8 +124,7 @@ window.addEventListener("DOMContentLoaded", function () {
             if (macarons != 0 && macarons >= 0.5) {
                 nbMacarons.innerHTML += 
                 "<div class'tooltip'>"+
-                    "<img src='./../assets/images/technique/macaron0.5.png' alt='Le demi macaron' style='height: 50px; margin: 2.5px 2.5px;'></img>"+
-                    "<span class='tooltiptext'> Le demi macaron. Valeur : 0.5 macaron</span>"+
+                    "<img src='./../assets/images/technique/macaron0.5.png' alt='Le demi macaron' style='height: 50px; margin: 2.5px 2.5px;'></img><span class='tooltiptext'> Le demi macaron. Valeur : 0.5 macaron</span>"+
             "</div>";
                 macarons = macarons - 0.5;
             }
@@ -159,8 +158,7 @@ window.addEventListener("DOMContentLoaded", function () {
         for (mac; mac > n;mac-=n){
             nbMacarons.innerHTML += 
             "<div class'tooltip'>"+
-                "<img src='./../assets/images/technique/macaron"+n+".png' alt='"+alt+"' style='height: 50px; margin: 0 2.5px;'></img>"+
-                "<span class='tooltiptext'>"+alt+" Valeur : "+n+" macarons</span>"+
+                "<img src='./../assets/images/technique/macaron"+n+".png' alt='"+alt+"' style='height: 50px; margin: 0 2.5px;'></img><span class='tooltiptext'>"+alt+" Valeur : "+n+" macarons</span>"+
             "</div>";
             removeMac+=n
         }
