@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded",function(){
     const articleDuring = document.getElementById("pendantArticle");
     const articleAfter = document.getElementById("apresArticle");
 
-    beforeBtn.addEventListener('click',function(){
+    beforeBtn.addEventListener('click', function(){
         beforeBtn.classList.add("btnSelected");
         duringBtn.classList.remove("btnSelected");
         afterBtn.classList.remove("btnSelected");
@@ -17,14 +17,14 @@ window.addEventListener("DOMContentLoaded",function(){
         console.log("before");
         ShowArticle('block', 'none', 'none');
     })
-    duringBtn.addEventListener('click',function(){
+    duringBtn.addEventListener('click', function(){
         beforeBtn.classList.remove("btnSelected");
         duringBtn.classList.add("btnSelected");
         afterBtn.classList.remove("btnSelected");
         console.log("during");
         ShowArticle('none', 'block', 'none');
     })
-    afterBtn.addEventListener('click',function(){
+    afterBtn.addEventListener('click', function(){
         beforeBtn.classList.remove("btnSelected");
         duringBtn.classList.remove("btnSelected");
         afterBtn.classList.add("btnSelected");
