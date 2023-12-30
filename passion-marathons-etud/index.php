@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 	<title>Passion Marathons</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="./assets/css/style.css" type="text/css" media="all">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/620fc58eba.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 	<div id="call-action">
 		<div>
@@ -97,7 +99,7 @@
 				</a>
 			</div>
 		</section>
-		<section id="temoignage" >
+		<section id="temoignage">
 			<div class="sectionTitle">
 				<h2>Sur la ligne d'arrivée</h2>
 			</div>
@@ -106,12 +108,15 @@
 					<em>Au départ : une adrénaline de ouf, au 32ème : un coup de barre XXL</em>
 				</blockquote>
 				<p class="texte_paragraphe"> L’hymne américain retenti, le coup de canon part…la course est lancée.
-				A moi New York mais avant il va falloir passer le Verazano Brigde.
-				ça grimpe dur mais qu’est ce que c’est beau. Ensuite c’est 42,190 
-				dans les 5 quartiers de New York avec du monde (beaucoup de monde) sur le bord de route. 
-				L’ambiance est dingue. Les new yorkais sont fous surtout à Brooklyn. 
-				Le parcours est compliqué car beaucoup de ligne droite en faut plat montant et les ponts sont de vrais col ! L’arrivée à central Park est grandiose avec du monde mêlés au couleur de l’automne. A noté qu’il y a très peu de nourriture au ravitaillement si ce n’est deux points où ils distribuent des gels. 
-				Il faut mieux prévoir ! Sinon il y a à boire tous les miles (1,6km) sauf sur les ponts.</p>
+					A moi New York mais avant il va falloir passer le Verazano Brigde.
+					ça grimpe dur mais qu’est ce que c’est beau. Ensuite c’est 42,190
+					dans les 5 quartiers de New York avec du monde (beaucoup de monde) sur le bord de route.
+					L’ambiance est dingue. Les new yorkais sont fous surtout à Brooklyn.
+					Le parcours est compliqué car beaucoup de ligne droite en faut plat montant et les ponts sont de
+					vrais col ! L’arrivée à central Park est grandiose avec du monde mêlés au couleur de l’automne. A
+					noté qu’il y a très peu de nourriture au ravitaillement si ce n’est deux points où ils distribuent
+					des gels.
+					Il faut mieux prévoir ! Sinon il y a à boire tous les miles (1,6km) sauf sur les ponts.</p>
 				<img src="./assets/images/home/temoignage/new-york-ligne.jpg" alt="New-York ligne">
 			</div>
 		</section>
@@ -120,30 +125,29 @@
 				<h2>Passion Marathons sur Instagram</h2>
 			</div>
 			<div>
-			<?php
-        $numbers = array();
-        $arraysWidth = sizeof($numbers);
-        $html_str = "";
+				<?php
+				$numbers = array();
+				$arraysWidth = sizeof($numbers);
+				$html_str = "";
 
-        while ($arraysWidth != 10) {
-            $n = random_int(1, 18);
-            if (!(in_array($n,$numbers))) {
-                array_push($numbers, $n);
-                $arraysWidth++;
-            }
-        } 
+				while ($arraysWidth != 10) {
+					$n = random_int(1, 18);
+					if (!(in_array($n, $numbers))) {
+						array_push($numbers, $n);
+						$arraysWidth++;
+					}
+				}
 
-        foreach($numbers as $num)
-        {
-            $html_str .= '<a href="#" style="background-image:url(./assets/images/home/instagram/insta'. $num .'.webp);background-size: cover; background-position: center center; "> </a>';
-        }
-        echo $html_str;
-        ?>
+				foreach ($numbers as $num) {
+					$html_str .= '<a href="#" style="background-image:url(./assets/images/home/instagram/insta' . $num . '.webp);background-size: cover; background-position: center center; "> </a>';
+				}
+				echo $html_str;
+				?>
 			</div>
 			<div>
 				<a href="#">
 					<i class="fa-brands fa-instagram"></i>
-	               	Rejoignez-nous sur Insta
+					Rejoignez-nous sur Insta
 				</a>
 			</div>
 		</section>
@@ -154,7 +158,5 @@
 		<a href="#mainBloc">Haut de la page</a>
 	</footer>
 </body>
+
 </html>
-			
-			
-				

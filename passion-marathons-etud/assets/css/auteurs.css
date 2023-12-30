@@ -22,6 +22,9 @@ body {
 #conteneur {
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    
 }
 
 #section_droite, #section_gauche, #section_real, #section_bio {
