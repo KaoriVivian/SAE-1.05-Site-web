@@ -1,37 +1,62 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./../../assets/css/auteurs.css">
-    </head>
-    <body>
-        <div id="conteneur">
-            <div id="section_real">
-                <div class="realisations" style="background-image:url(./../../assets/images/auteurs/Viviane/fatesofsins.png);">
-                    <a href="https://www.instagram.com/p/CzykeuxoTP3/?utm_source=ig_web_copy_link&igshid=N2ViNmM2MDRjNw==">Fates Of Sins</a>
-                </div>
-                <div class="realisations" style="background-image:url(./../../assets/images/auteurs/Viviane/I-will-make-it.jpg);">
-                    <a href="https://www.instagram.com/p/CxRDEWDIDbw/?utm_source=ig_web_copy_link&igshid=N2ViNmM2MDRjNw==">I Will Make It</a>
-                </div>
-                <div class="realisations" style="background-image:url(./../../assets/images/auteurs/Viviane/chrysantenum.png);"> 
-                    <a href="https://www.instagram.com/p/CwLDI9aofDu/?utm_source=ig_web_copy_link&igshid=N2ViNmM2MDRjNw==">Chrysantenum</a>
-                    <!--L'image fait plus de 1Mo mais c'est difficile de bien compresser une image aussi dense sans perdre de qualité !-->
-                </div>
 
-            </div><div id="section_bio">
-                <h1 class="title">
-                    Biographie de Viviane
-                </h1>
-                <p class="text">
-                    Jeune femme trans de 18 ans et étudiante en MMI à l'Institut Universitaire et Technologique d'Angoulême. Je suis une graphiste semie professionnelle à mes heures perdues. Fan de musique et d'informatique, mon objectif est de devenir la meilleure possible dans les secteurs qui m'animent face a des projets de plus en plus complexes et épanouissants. A long terme, je souhaite devenir graphiste et continuer a travers mon style de créer des images uniques et pleines de sens qui peuvent plaire a tous en mélangeant ma personne et divers références.
-                </p>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./../../assets/css/auteurs.css">
+</head>
+
+<body>
+    <div style="position: fixed; bottom: 10px; right: 10px;">
+        <button onclick="changeFontSize('1')">A+</button>
+        <button onclick="changeFontSize('0')">A-</button>
+        <button onclick="DyslexieMode('true')">Dyslexie On</button>
+        <button onclick="DyslexieMode('false')">Dyslexie Off</button>
+        <button onclick="ChangeThemeColor('Bleu')">Bleu</button>
+        <button onclick="ChangeThemeColor('Red')">Red</button>
+        <button onclick="ChangeThemeColor('Green')">Green</button>
+    </div>
+
+    <div id="conteneur">
+        <div id="section_real">
+            <div class="realisations"
+                style="background-image:url(./../../assets/images/auteurs/Viviane/fatesofsins.png);">
+                <a href="https://www.instagram.com/p/CzykeuxoTP3/?utm_source=ig_web_copy_link&igshid=N2ViNmM2MDRjNw==">Fates
+                    Of Sins</a>
             </div>
-        </div>
+            <div class="realisations"
+                style="background-image:url(./../../assets/images/auteurs/Viviane/I-will-make-it.jpg);">
+                <a href="https://www.instagram.com/p/CxRDEWDIDbw/?utm_source=ig_web_copy_link&igshid=N2ViNmM2MDRjNw==">I
+                    Will Make It</a>
+            </div>
+            <div class="realisations"
+                style="background-image:url(./../../assets/images/auteurs/Viviane/chrysantenum.png);">
+                <a
+                    href="https://www.instagram.com/p/CwLDI9aofDu/?utm_source=ig_web_copy_link&igshid=N2ViNmM2MDRjNw==">Chrysantenum</a>
+                <!--L'image fait plus de 1Mo mais c'est difficile de bien compresser une image aussi dense sans perdre de qualité !-->
+            </div>
 
-        <script src="./../../assets/js/font-size-changer.js"></script>
-    </body>
+        </div>
+        <div id="section_bio">
+            <h1 id="title">
+                Biographie de Viviane
+            </h1>
+            <p id="text">
+                Jeune femme trans de 18 ans et étudiante en MMI à l'Institut Universitaire et Technologique d'Angoulême.
+                Je suis une graphiste semie professionnelle à mes heures perdues. Fan de musique et d'informatique, mon
+                objectif est de devenir la meilleure possible dans les secteurs qui m'animent face a des projets de plus
+                en plus complexes et épanouissants. A long terme, je souhaite devenir graphiste et continuer a travers
+                mon style de créer des images uniques et pleines de sens qui peuvent plaire a tous en mélangeant ma
+                personne et divers références.
+            </p>
+        </div>
+    </div>
+
+    <script src="./../../assets/js/accessibilite.js"></script>
+</body>
+
 </html>

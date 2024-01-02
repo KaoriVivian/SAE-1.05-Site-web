@@ -3,6 +3,12 @@
     margin: 0px
 }
 
+@font-face {
+    font-family: "Open-Dyslexie";
+    src: url('./../fonts/OpenDyslexic-Regular.otf');
+}
+
+
 html {
     font-family: Oswald;
     font-weight: normal;
@@ -86,8 +92,7 @@ body {
     font-size: 20px;
 }
 
-.rs
-{
+.rs {
     z-index: 4;
 }
 
