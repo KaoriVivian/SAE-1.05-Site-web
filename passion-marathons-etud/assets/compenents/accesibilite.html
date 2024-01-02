@@ -1,6 +1,47 @@
-<div style="position: fixed; bottom: 10; right: 10;">
-    <button onclick="changeFontSize('icrease')">A+</button>
-    <button onclick="changeFontSize('decrease')">A-</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <link rel="stylesheet" href="./../css/accessibilitemenu.css">
+    <link rel="stylesheet" href="./../css/style.css">
+    <script src="https://kit.fontawesome.com/620fc58eba.js" crossorigin="anonymous"></script>
 
-    <script src="./../js/font-size-changer.js"></script>
-</div>
+    <div id="access">
+        <div id="accessMenu" style="display: none;">
+            <div id="sizeChanger">
+                <span id="min_textSize">A<sup>-</sup></span>
+                <span id="reset_textSize">A<sup>*</sup></span>
+                <span id="max_textSize">A<sup>+</sup></span>
+            </div>
+
+            <div class="option">
+                <h2>Mode Dyslexie</h2>
+                <label class="switch">
+                    <input type="checkbox" id="dyslexiaSlider">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="option">
+                <h2>Couleur du texte</h2>
+                <input type="color" id="favcolor textColor" value="#ffffff">
+            </div>
+
+            <div class="option">
+                <h2>Couleur du fond</h2>
+                <input type="color" id="favcolor backgoundColor" value="#ffffff">
+            </div>
+        </div>
+
+        <div id="accessMenuButton">
+            <i class="fa-brands fa-accessible-icon"></i>
+        </div>
+    </div>
+    <script src="./../js/accessV2.js"></script>
+        
+</body>
+</html>
