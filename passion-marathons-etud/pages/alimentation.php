@@ -7,14 +7,8 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./../assets/css/style.css">
-
-	<script src="./../assets/js/accessV2.js"></script>
-	<link rel="stylesheet" href="./../assets/css/accessibilitemenu.css"> 
-
 </head>
 <body>
-	<?php include './../assets/compenents/accesibilite.html'; ?>
-
 	<div id="mainBloc">
 		<header>
 			<img src="./../assets/images/banniere.png" alt="Passion Marathons - Agence spécialisées dans les marathons">
@@ -49,14 +43,14 @@
 		<section id="alimentation" >
 			<h1 class="title">L'alimentation : le facteur majeur de la performance</h1>
 			<nav>
-				<p class="before text" class="btnSelected">Avant le marathon</p>
-				<p class="during text">Pendant le marathon</p>
-				<p class="after text">Après le marathon</p>
+				<p id="before" class="btnSelected">Avant le marathon</p>
+				<p id="during">Pendant le marathon</p>
+				<p id="after">Après le marathon</p>
 				<div class="fantome"></div>
 			</nav>
 			<article id="avantArticle">
-				<h2 class="title">Un marathon se prépare longtemps à l'avance ...</h2>
-				<p class="text">Un marathon ne se prépare pas une semaine avant la compétition, mais plusieurs mois 
+				<h2>Un marathon se prépare longtemps à l'avance ...</h2>
+				<p>Un marathon ne se prépare pas une semaine avant la compétition, mais plusieurs mois 
 				en amont. En général, quatre mois avant la course, il est prudent d’aller 
 				voir un médecin généraliste et d’effectuer une prise de sang, pour vérifier s’il y a des carences 
 				ou non.</p>
@@ -74,8 +68,8 @@
 				<img src="./../assets/images/alimentation/avant.png" alt="Conseils d'alimentation avant un marathon">
 			</article>
 			<article  style="display:none" id="pendantArticle">
-				<h2 class="title">Une priorité : boire de l'eau en quantité</h2>
-				<p class="text">La prise d’une boisson énergétique est intéressante afin de se réhydrater 
+				<h2>Une priorité : boire de l'eau en quantité</h2>
+				<p>La prise d’une boisson énergétique est intéressante afin de se réhydrater 
 				et de limiter la baisse des stocks de « sucres ». Un minimum de 500mL par heure est à respecter, quantité à augmenter 
 				si les conditions atmosphériques sont chaudes, sèches et « ventées » !
 				Cette dernière doit être de préférence isotonique (ambiance neutre à froide) 
@@ -90,14 +84,14 @@
 				<img src="./../assets/images/alimentation/pendant.jpg" alt="Conseils d'alimentation pendant un marathon">
 			</article>
 			<article style="display:none" id="apresArticle">
-				<h2 class="title">Pour une bonne récupération : manger léger et continuer à bien s'hydrater</h2>
-				<p class="text">Que ce soit juste après l’effort ou dans les jours qui suivent, il ne faut  pas hésiter à boire à satiété. Surtout des boissons gazeuses riches en sels minéraux alcalinisants comme le bicarbonate, le potassium ou le magnésium 
+				<h2 >Pour une bonne récupération : manger léger et continuer à bien s'hydrater</h2>
+				<p>Que ce soit juste après l’effort ou dans les jours qui suivent, il ne faut  pas hésiter à boire à satiété. Surtout des boissons gazeuses riches en sels minéraux alcalinisants comme le bicarbonate, le potassium ou le magnésium 
 				et ajouter du citron pressé (citrate). Et bien sûr, il faut éviter l’alcool au maximum ainsi que les repas trop lourds. Les menus méditerranéens anti-inflammatoires seront privilégiés : poissons, légumes verts, fruits, viande blanche 
 				et acides gras essentiels comme les oméga-3 (noix, huile de colza, poissons gras).
-				<p class="text">Certains aliments riches en tryptophanes boostent la mélatonine et favorisent le sommeil,
+				<p>Certains aliments riches en tryptophanes boostent la mélatonine et favorisent le sommeil,
 				comme la banane, le saumon, le jambon, le thon, les céréales complètes, les produits laitiers ou 
 				les fruits secs qui contiennent cet acide aminé. 
-				<p class="text"> La consommation de glucides (glucose + fructose) après un effort est particulièrement importante
+				<p> La consommation de glucides (glucose + fructose) après un effort est particulièrement importante
 				pour la réplétion des stocks de glycogène au niveau musculaire (plutôt le glucose) 
 				et hépatique (plutôt le fructose). Il en va de même pour la consommation de protéines dont le but est de limiter le catabolisme (« la casse ») et de favoriser l’anabolisme (« la construction ou reconstruction ») des protéines lésées (muscles notamment). Cette consommation doit se faire juste après l’effort et le plus tôt possible. En effet, plus cette consommation est rapide 
 				et plus la quantité de resynthèse est importante. On parle souvent de « fenêtre métabolique ».</p>

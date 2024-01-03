@@ -18,20 +18,26 @@
 
 
     <div id="conteneur">
-        <div id="section_real"  tabindex="0">
-            <div class="realisations" style="background-image: url('./../../assets/images/auteurs/valorant.jpg');">
+        <div id="section_real" tabindex="1">
+            <div class="realisations"
+                style="background-image: url('./../../assets/images/auteurs/Khaled/Ascenta.PNG');">
+                <a href="https://khaledev.fr/Ascenta-Consept/" tabindex="1" style="color:black;">Ascenta Concept</a>
             </div>
-            <div class="realisations" style="background-image: url('./../../assets/images/auteurs/valorant.jpg');">
+            <div class="realisations"
+                style="background-image: url('./../../assets/images/auteurs/Khaled/Home_page_website.PNG');">
+                <a href="https://kalkardosh.alwaysdata.net/" tabindex="1">Page d'acceuil de mon site web</a>
             </div>
-            <div class="realisations" style="background-image: url('./../../assets/images/auteurs/valorant.jpg');">
+            <div class="realisations"
+                style="background-image: url('./../../assets/images/auteurs/Khaled/To-do-list.PNG');">
+                <a tabindex="1">To-Do List</a>
             </div>
 
         </div>
         <div id="section_bio">
-            <h1 class="title"  tabindex="1">
+            <h1 class="title" tabindex="1">
                 Biographie de Khaled
             </h1>
-            <p class="text"  tabindex="1">
+            <p class="text" tabindex="1">
                 Mensarum enim voragines et varias voluptatum inlecebras, ne longius progrediar, praetermitto illuc
                 transiturus quod quidam per ampla spatia urbis subversasque silices sine periculi metu properantes equos
                 velut publicos signatis quod dicitur calceis agitant, familiarium agmina tamquam praedatorios globos

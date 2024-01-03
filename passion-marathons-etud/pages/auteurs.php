@@ -40,7 +40,7 @@
                 <h1 class="title" tabindex="1">Khaled</h1>
                 <nav class="rs text" tabindex="1">
                     <a href="https://discord.com/users/872910449933434890"><i class="fa-brands fa-discord" tabindex="1"></i></a>
-                    <i class="fa-brands fa-whatsapp" tabindex="1"></i>
+                    <a href="tel:+33650717438"><i class="fa-brands fa-whatsapp" tabindex="1"></i></a>
                 </nav>
             </div>
         </div>

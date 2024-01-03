@@ -9,13 +9,9 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/620fc58eba.js" crossorigin="anonymous"></script>
-
-	<script src="./../assets/js/accessV2.js"></script>
-	<link rel="stylesheet" href="./../assets/css/accessibilitemenu.css"> 
 </head>
 
 <body>
-	<?php include './assets/compenents/accesibilite.html'; ?>
 
 	<div id="call-action">
 		<div>

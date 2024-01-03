@@ -35,6 +35,7 @@ window.addEventListener('DOMContentLoaded', function () {
 })
 
 let texts = [".title", ".text"];
+
 function changeFontSize(mode) {
     let TitleDefaultSize = 32;
     let TextsDefaultSize = 16;
@@ -49,7 +50,7 @@ function changeFontSize(mode) {
 
             fontSize = parseFloat(fontSize);
 
-            switch (mode){
+            switch (mode) {
                 case 'min':
                     element.style.fontSize = (fontSize - 3) + "px"
                     break;
@@ -58,8 +59,7 @@ function changeFontSize(mode) {
                     break;
 
                 case 'reset':
-                default:
-                    if (element.id === "title") {
+                    if (element.className === "title") {
                         element.style.fontSize = TitleDefaultSize + "px";
                     } else {
                         element.style.fontSize = TextsDefaultSize + "px";
