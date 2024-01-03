@@ -11,6 +11,9 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./../assets/css/style.css">
+
+	<script src="./../assets/js/accessV2.js"></script>
+	<link rel="stylesheet" href="./../assets/css/accessibilitemenu.css"> 
 </head>
 
 <body>
@@ -30,7 +33,7 @@
 				<img src="./../assets/images/menu/dest.svg" alt="Les marathons dans le monde">
 				Marathons
 			</a>
-			<a href="./alimentation.html">
+			<a href="./alimentation.php">
 				<img src="./../assets/images/menu/conseils.svg" alt="Conseils pour la préparation d'un marathon">
 				conseils
 			</a>
@@ -42,7 +45,7 @@
 				<img src="./../assets/images/menu/nous.svg" alt="Equipe de Passion Marathons">
 				L'équipe
 			</a>
-			<a href="./calculatrice.html">
+			<a href="./calculatrice.php">
 				<img src="./../assets/images/menu/abacus.svg" alt="Calcule le nombre de macarons que tu as dépensé">
 				calculette
 			</a>

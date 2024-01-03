@@ -99,3 +99,8 @@ body {
 #conteneur>div>div h1 {
     z-index: 4;
 }
+
+a {
+    text-decoration: none;
+    color: white;
+}

@@ -25,7 +25,7 @@
 				<img src="./../assets/images/menu/dest.svg" alt="Les marathons dans le monde">
 				Marathons
 			</a>
-			<a href="./alimentation.html">
+			<a href="./alimentation.php">
 				<img src="./../assets/images/menu/conseils.svg" alt="Conseils pour la préparation d'un marathon">
 				conseils
 			</a>
@@ -37,7 +37,7 @@
 				<img src="./../assets/images/menu/nous.svg" alt="Equipe de Passion Marathons">
 				L'équipe
 			</a>
-			<a href="./calculatrice.html">
+			<a href="./calculatrice.php">
 				<img src="./../assets/images/menu/abacus.svg" alt="Calcule le nombre de macarons que tu as dépensé">
 				calculette
 			</a>

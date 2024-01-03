@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="./../assets/css/auteurs.css">
     <link rel="stylesheet" href="./../assets/css/accessibilitemenu.css">
     <script src="https://kit.fontawesome.com/620fc58eba.js" crossorigin="anonymous"></script>
+
+	<script src="./../assets/js/accessV2.js"></script>
+	<link rel="stylesheet" href="./../assets/css/accessibilitemenu.css"> 
 </head>
 
 <body>

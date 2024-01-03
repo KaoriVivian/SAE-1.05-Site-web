@@ -52,6 +52,7 @@ function changeFontSize(mode) {
             switch (mode){
                 case 'min':
                     element.style.fontSize = (fontSize - 3) + "px"
+                    break;
                 case 'max':
                     element.style.fontSize = (fontSize + 3) + "px";
                     break;
