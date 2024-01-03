@@ -18,6 +18,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
     /// HELPFUL
     const error_indicator = document.getElementById('error_indicator');
+    const astuce_div = this.document.getElementById('astuce');
     let bool_error;
 
     // Default values whan pages load
@@ -25,6 +26,7 @@ window.addEventListener("DOMContentLoaded", function () {
     let isWgtVisible = false;
     calcBody.style.display = "none";
     calculatorGoals.style.display = "contents";
+    astuce_div.style.display = "none";
 
 
     btnStart.addEventListener('click', function () {
@@ -121,10 +123,13 @@ window.addEventListener("DOMContentLoaded", function () {
         console.log("Share result...");
         let kcalMN = (spdValue * 3.5 * wgtValue) / 200;
         let kcal = kcalMN * timeValue;
-        kcal = Math.round(kcal * 1000) / 1000
+        kcal = Math.round(kcal * 1000) / 1000;
 
         let macarons = (kcal / 100);
-        macarons = Math.round(macarons * 1000) / 1000
+        macarons = Math.round(macarons * 1000) / 1000;
+
+        let totalMacarons = macarons;
+        totalMacarons = Math.round(totalMacarons * 10) / 10;
 
         console.log(macarons); // See the value of "macarons" before show the images.
 
@@ -138,20 +143,28 @@ window.addEventListener("DOMContentLoaded", function () {
 
             if (!bool_error) {
                 nbKcal.innerHTML = kcal + " Kcal consommées.";
-                nbMacarons.innerHTML += " macarons / calories consommées.";
+                nbMacarons.innerHTML += "(" + totalMacarons + ") macarons / calories consommées. ";
+                astuce_div.style.display = "block";
+                astuce_div.innerHTML = "(passer votre souris sur les macarons pour connaitre leur valeur..)";
             } else {
                 nbKcal.innerHTML = null;
                 nbMacarons.innerHTML = null;
+                astuce_div.style.display = "none";
+                astuce_div.innerHTML = null;
             }
 
         } else {
 
             if (!bool_error) {
                 nbKcal.innerHTML = kcal + " Kcal consommées.";
-                nbMacarons.innerHTML += macarons + " macarons / calories consommées.";
+                nbMacarons.innerHTML += macarons + "(" + totalMacarons + ") macarons / calories consommées. ";
+                astuce_div.style.display = "block";
+                astuce_div.innerHTML = "(passer votre souris sur les macarons pour connaitre leur valeur..)";
             } else {
                 nbKcal.innerHTML = null;
                 nbMacarons.innerHTML = null;
+                astuce_div.style.display = "none";
+                astuce_div.innerHTML = null;
             }
         }
 

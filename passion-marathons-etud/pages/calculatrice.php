@@ -65,7 +65,8 @@
 				possible
 				pour que vous ayez les plus beaux macarons disponibles !
 			</p>
-			<p class="text">Le fonctionnement de la calculatrice est simple, vous n'avez qu'à entrer la vitesse moyenne de votre
+			<p class="text">Le fonctionnement de la calculatrice est simple, vous n'avez qu'à entrer la vitesse moyenne
+				de votre
 				course, le temps que vous avez pris et votre poids et le calcul se fera automatiquement ! </p>
 
 			<br>
@@ -80,11 +81,11 @@
 			</div>
 			<div id="timeD" style="display: none;">
 				<p class="text">Temps (Minutes): </p>
-				<input type="text" id="time" placeholder="Temps en Min...">
+				<input type="text" id="time" placeholder="Temps en minute...">
 			</div>
 			<div id="wgtD" style="display: none;">
 				<p class="text">Poids (Kg): </p>
-				<input type="text" id="weight" placeholder="Poids en Kg...">
+				<input type="text" id="weight" placeholder="Poids en kg...">
 			</div>
 		</div>
 
@@ -92,7 +93,8 @@
 		<br>
 		<img src="./../assets/images/technique/noice-nice.gif" alt="Nice Weight" style="display: none;" id="nice">
 		<div id="nbKcal"></div>
-		<div id="nbMacarons"></div>
+		<div id="nbMacarons" style="display: flex; justify-content: center;	align-items: center; margin-top: 5px;"></div>
+		<div id="astuce" style="display: none;"></div>
 		<div style="color: red;" id="error_indicator"></div>
 
 	</div>
