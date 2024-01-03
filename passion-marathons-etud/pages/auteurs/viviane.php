@@ -8,44 +8,41 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./../../assets/css/auteurs.css">
+    <link rel="stylesheet" href="./../../assets/css/accessibilitemenu.css">
+    <script src="https://kit.fontawesome.com/620fc58eba.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div style="position: fixed; bottom: 10px; right: 10px;">
-        <button onclick="changeFontSize('1')">A+</button>
-        <button onclick="changeFontSize('0')">A-</button>
-        <button onclick="DyslexieMode('true')">Dyslexie On</button>
-        <button onclick="DyslexieMode('false')">Dyslexie Off</button>
-        <button onclick="ChangeThemeColor('Bleu')">Bleu</button>
-        <button onclick="ChangeThemeColor('Red')">Red</button>
-        <button onclick="ChangeThemeColor('Green')">Green</button>
-    </div>
+    <?php include './../../assets/compenents/accesibilite.html'; ?>
+
 
     <div id="conteneur">
         <div id="section_real">
             <div class="realisations"
                 style="background-image:url(./../../assets/images/auteurs/Viviane/fatesofsins.png);">
-                <a href="https://www.instagram.com/p/CzykeuxoTP3/?utm_source=ig_web_copy_link&igshid=N2ViNmM2MDRjNw==">Fates
+                <a href="https://www.instagram.com/p/CzykeuxoTP3/?utm_source=ig_web_copy_link&igshid=N2ViNmM2MDRjNw=="
+                    tabindex="1">Fates
                     Of Sins</a>
             </div>
             <div class="realisations"
                 style="background-image:url(./../../assets/images/auteurs/Viviane/I-will-make-it.jpg);">
-                <a href="https://www.instagram.com/p/CxRDEWDIDbw/?utm_source=ig_web_copy_link&igshid=N2ViNmM2MDRjNw==">I
+                <a href="https://www.instagram.com/p/CxRDEWDIDbw/?utm_source=ig_web_copy_link&igshid=N2ViNmM2MDRjNw=="
+                    tabindex="1">I
                     Will Make It</a>
             </div>
             <div class="realisations"
                 style="background-image:url(./../../assets/images/auteurs/Viviane/chrysantenum.png);">
-                <a
-                    href="https://www.instagram.com/p/CwLDI9aofDu/?utm_source=ig_web_copy_link&igshid=N2ViNmM2MDRjNw==">Chrysantenum</a>
+                <a href="https://www.instagram.com/p/CwLDI9aofDu/?utm_source=ig_web_copy_link&igshid=N2ViNmM2MDRjNw=="
+                    tabindex="1">Chrysantenum</a>
                 <!--L'image fait plus de 1Mo mais c'est difficile de bien compresser une image aussi dense sans perdre de qualité !-->
             </div>
 
         </div>
         <div id="section_bio">
-            <h1 id="title">
+            <h1 id="title" tabindex="1">
                 Biographie de Viviane
             </h1>
-            <p id="text">
+            <p id="text" tabindex="1">
                 Jeune femme trans de 18 ans et étudiante en MMI à l'Institut Universitaire et Technologique d'Angoulême.
                 Je suis une graphiste semie professionnelle à mes heures perdues. Fan de musique et d'informatique, mon
                 objectif est de devenir la meilleure possible dans les secteurs qui m'animent face a des projets de plus
@@ -57,6 +54,7 @@
     </div>
 
     <script src="./../../assets/js/accessibilite.js"></script>
+    <script src="./../../assets/js/accessV2.js"></script>
 </body>
 
 </html>

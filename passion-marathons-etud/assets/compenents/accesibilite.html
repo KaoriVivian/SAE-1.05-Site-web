@@ -1,47 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <link rel="stylesheet" href="./../css/accessibilitemenu.css">
-    <link rel="stylesheet" href="./../css/style.css">
-    <script src="https://kit.fontawesome.com/620fc58eba.js" crossorigin="anonymous"></script>
-
-    <div id="access">
-        <div id="accessMenu" style="display: none;">
-            <div id="sizeChanger">
-                <span id="min_textSize">A<sup>-</sup></span>
-                <span id="reset_textSize">A<sup>*</sup></span>
-                <span id="max_textSize">A<sup>+</sup></span>
-            </div>
-
-            <div class="option">
-                <h2>Mode Dyslexie</h2>
-                <label class="switch">
-                    <input type="checkbox" id="dyslexiaSlider">
-                    <span class="slider round"></span>
-                </label>
-            </div>
-
-            <div class="option">
-                <h2>Couleur du texte</h2>
-                <input type="color" id="favcolor textColor" value="#ffffff">
-            </div>
-
-            <div class="option">
-                <h2>Couleur du fond</h2>
-                <input type="color" id="favcolor backgoundColor" value="#ffffff">
-            </div>
+<div id="access" style="position: fixed; z-index: 5; bottom: 10px; left: 10px;">
+    <div id="accessMenu" style="display: none;">
+        <div id="sizeChanger">
+            <span id="min_textSize" style="cursor: pointer;">A<sup>-</sup></span>
+            <span id="reset_textSize" style="cursor: pointer;">A<sup>*</sup></span>
+            <span id="max_textSize" style="cursor: pointer;">A<sup>+</sup></span>
         </div>
 
-        <div id="accessMenuButton">
-            <i class="fa-brands fa-accessible-icon"></i>
+        <div class="option">
+            <h2>Mode Dyslexie</h2>
+            <label class="switch">
+                <input name="dyslexiaSlider" type="checkbox" id="dyslexiaSlider" onclick="validateDyslexieMode()">
+                <span class="slider round"></span>
+            </label>
+        </div>
+
+        <div class="option" style="justify-content: space-evenly;">
+            <h2>Themes</h2>
+            <button onclick="ChangeThemeColor('Bleu')"
+                style="background-color: #000066; border: hidden; color: white; border-radius: 22px; padding: 7px;">Bleu</button>
+            <button onclick="ChangeThemeColor('Red')"
+                style="background-color: #660000; border: hidden; color: white; border-radius: 22px; padding: 7px;">Red</button>
+            <button onclick="ChangeThemeColor('Green')"
+                style="background-color: #006602; border: hidden; color: white; border-radius: 22px; padding: 7px;">Green</button>
         </div>
     </div>
-    <script src="./../js/accessV2.js"></script>
-        
-</body>
-</html>
+
+    <div id="accessMenuButton">
+        <i class="fa-brands fa-accessible-icon"></i>
+    </div>
+</div>

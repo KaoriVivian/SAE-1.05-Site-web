@@ -8,22 +8,17 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./../../assets/css/auteurs.css">
+    <link rel="stylesheet" href="./../../assets/css/accessibilitemenu.css">
+    <script src="https://kit.fontawesome.com/620fc58eba.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-    <div style="position: fixed; bottom: 10px; right: 10px;">
-        <button onclick="changeFontSize('1')">A+</button>
-        <button onclick="changeFontSize('0')">A-</button>
-        <button onclick="DyslexieMode('true')">Dyslexie On</button>
-        <button onclick="DyslexieMode('false')">Dyslexie Off</button>
-        <button onclick="ChangeThemeColor('Bleu')">Bleu</button>
-        <button onclick="ChangeThemeColor('Red')">Red</button>
-        <button onclick="ChangeThemeColor('Green')">Green</button>
-    </div>
+    <?php include './../../assets/compenents/accesibilite.html'; ?>
+
 
     <div id="conteneur">
-        <div id="section_real">
+        <div id="section_real"  tabindex="0">
             <div class="realisations" style="background-image: url('./../../assets/images/auteurs/valorant.jpg');">
             </div>
             <div class="realisations" style="background-image: url('./../../assets/images/auteurs/valorant.jpg');">
@@ -33,10 +28,10 @@
 
         </div>
         <div id="section_bio">
-            <h1 id="title">
+            <h1 id="title"  tabindex="1">
                 Biographie de Khaled
             </h1>
-            <p id="text">
+            <p id="text"  tabindex="1">
                 Mensarum enim voragines et varias voluptatum inlecebras, ne longius progrediar, praetermitto illuc
                 transiturus quod quidam per ampla spatia urbis subversasque silices sine periculi metu properantes equos
                 velut publicos signatis quod dicitur calceis agitant, familiarium agmina tamquam praedatorios globos
@@ -47,6 +42,7 @@
     </div>
 
     <script src="./../../assets/js/accessibilite.js"></script>
+    <script src="./../../assets/js/accessV2.js"></script>
 </body>
 
 </html>

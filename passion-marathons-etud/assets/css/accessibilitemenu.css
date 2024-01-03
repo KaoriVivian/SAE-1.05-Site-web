@@ -1,132 +1,137 @@
 #accessMenuButton {
-    height: 50px;
-    width: 50px;
-    background-color: rgb(68, 68, 68);
-    border-radius: 25px;
+  height: 50px;
+  width: 50px;
+  background-color: rgb(68, 68, 68);
+  border-radius: 25px;
 
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    i {
-        font-size: 30px;
-        color: rgb(13, 164, 211);
-        
-    }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  i {
+    font-size: 30px;
+    color: rgb(13, 164, 211);
+
+  }
 }
 
 #accessMenu {
-    height: 275px;
-    width: 400px;
-    background-color: #a3a3a3;
-    border-radius: 25px;
+  height: 275px;
+  width: 400px;
+  background-color: #a3a3a3;
+  border-radius: 25px;
 
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-    
-    
-    display: flex;
-    flex-direction: column;
-    
-    .option{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-    
-    h2{
-        color: black;
-        font-size: 32px;
-    }
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
 
-    
-}
-#sizeChanger {
-    width: 100px;
-    margin-top: 10px;
-    
+
+  display: flex;
+  flex-direction: column;
+
+  .option {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    align-self: center;
-    
+    margin-top: 30px;
+    margin-left: 5px;
+  }
 
-    
+  h2 {
+    color: black;
+    font-size: 32px;
+  }
 
-    span {
-        color: black;
-        font-size: 32px;
-        font-weight: bold;
-        margin: 0 20px;
-    }
+
 }
 
-.option input, .option label {
-    position: absolute;
-    right: 10px;
+#sizeChanger {
+  width: 100px;
+  margin-top: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+
+
+
+
+  span {
+    color: black;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0 20px;
+  }
 }
+
+.option input,
+.option label {
+  position: absolute;
+  right: 10px;
+}
+
 /* Slider Button CSS */
 .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-  }
-  
-  .switch input { 
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: #2196F3;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #2196F3;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
