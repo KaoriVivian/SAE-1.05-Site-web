@@ -99,7 +99,7 @@
 
 	</div>
 
-	<footer>
+	<footer style="position: absolute; bottom: 0; width: 100%;">
 		<p>Copyright : Passion Marathons 2015/2023 - contac@passionmarathons.com</p>
 		<a href="./pages/auteurs.html">Les auteurs du site </a>
 		<a href="#bloc_principal">Haut de la page</a>
