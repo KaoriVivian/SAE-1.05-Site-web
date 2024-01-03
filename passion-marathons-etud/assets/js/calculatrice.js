@@ -178,7 +178,7 @@ window.addEventListener("DOMContentLoaded", function () {
         if (maca > 0) {
             for (maca; maca > num; maca -= num) {
                 nbMacarons.innerHTML += "<div class='tooltip'><img src='./../assets/images/technique/macaron" + num + ".png' alt='" + alt + "' style='height: 50px; margin: 0 2.5px;'></img><span class='tooltiptext'>" + num + "</span></div>";
-                removeMac += num
+                removeMac += num;
             }
         }
 

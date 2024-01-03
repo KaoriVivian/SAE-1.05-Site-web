@@ -4,18 +4,18 @@ window.addEventListener('DOMContentLoaded', function () {
     const reset_textSize = this.document.getElementById('reset_textSize');
     const max_textSize = this.document.getElementById('max_textSize');
 
-    const accessMenuButton = this.document.getElementById('accessMenuButton')
-    const accessMenu = this.document.getElementById('accessMenu')
+    const accessMenuButton = this.document.getElementById('accessMenuButton');
+    const accessMenu = this.document.getElementById('accessMenu');
 
     const textColor = this.document.getElementById('textColor');
     const backgoundColor = this.document.getElementById('backgoundColor');
 
     accessMenuButton.addEventListener('click', function () {
-        console.log('click')
+        console.log('click');
         if (accessMenu.style.display === 'none') {
-            accessMenu.style.display = 'flex'
+            accessMenu.style.display = 'flex';
         } else {
-            accessMenu.style.display = 'none'
+            accessMenu.style.display = 'none';
         }
     });
 
@@ -52,7 +52,7 @@ function changeFontSize(mode) {
 
             switch (mode) {
                 case 'min':
-                    element.style.fontSize = (fontSize - 3) + "px"
+                    element.style.fontSize = (fontSize - 3) + "px";
                     break;
                 case 'max':
                     element.style.fontSize = (fontSize + 3) + "px";
@@ -89,7 +89,7 @@ function DyslexieMode(state) {
 
 function ChangeThemeColor(mode) {
 
-    let body = document.querySelector("body")
+    let body = document.querySelector("body");
 
     texts.forEach(text => {
         let el = document.querySelectorAll(text);
@@ -97,13 +97,13 @@ function ChangeThemeColor(mode) {
         el.forEach(element => {
             if (mode === "Bleu") {
                 element.style.color = "#000066";
-                body.style.backgroundColor = "#ffb300"
+                body.style.backgroundColor = "#ffb300";
             } else if (mode === "Red") {
                 element.style.color = "#660000";
-                body.style.backgroundColor = "#ffff00"
+                body.style.backgroundColor = "#ffff00";
             } else {
                 element.style.color = "#006602";
-                body.style.backgroundColor = "#ffffff"
+                body.style.backgroundColor = "#ffffff";
             }
         })
     })

@@ -51,14 +51,12 @@
   }
 }
 
-#accessMenu>p:nth-child(4)
-{
+#accessMenu>p:nth-child(4) {
   margin-top: 20px;
   color: black;
 }
 
-#accessMenu>p:nth-child(4)>a
-{
+#accessMenu>p:nth-child(4)>a {
   color: #0029ff;
 }
 
