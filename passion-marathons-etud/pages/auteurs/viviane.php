@@ -39,10 +39,10 @@
 
         </div>
         <div id="section_bio">
-            <h1 id="title" tabindex="1">
+            <h1 class="title" tabindex="1">
                 Biographie de Viviane
             </h1>
-            <p id="text" tabindex="1">
+            <p class="text" tabindex="1">
                 Jeune femme trans de 18 ans et étudiante en MMI à l'Institut Universitaire et Technologique d'Angoulême.
                 Je suis une graphiste semie professionnelle à mes heures perdues. Fan de musique et d'informatique, mon
                 objectif est de devenir la meilleure possible dans les secteurs qui m'animent face a des projets de plus

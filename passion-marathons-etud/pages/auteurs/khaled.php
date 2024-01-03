@@ -28,10 +28,10 @@
 
         </div>
         <div id="section_bio">
-            <h1 id="title"  tabindex="1">
+            <h1 class="title"  tabindex="1">
                 Biographie de Khaled
             </h1>
-            <p id="text"  tabindex="1">
+            <p class="text"  tabindex="1">
                 Mensarum enim voragines et varias voluptatum inlecebras, ne longius progrediar, praetermitto illuc
                 transiturus quod quidam per ampla spatia urbis subversasque silices sine periculi metu properantes equos
                 velut publicos signatis quod dicitur calceis agitant, familiarium agmina tamquam praedatorios globos

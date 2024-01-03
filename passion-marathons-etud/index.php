@@ -12,6 +12,8 @@
 </head>
 
 <body>
+	<?php include './../assets/compenents/accesibilite.html'; ?>
+
 	<div id="call-action">
 		<div>
 			<p>Pour une <br><b>performance <br> optimale</b>,<br> confiez-nous :</p>
@@ -54,14 +56,14 @@
 		<div id="featured">
 			<img src="./assets/images/home/alaune/new-york.jpg" alt="Ligne d'arrivée du marathon de New York">
 			<div>
-				<p>By Greg / Juillet 2023</p>
-				<p>L'aventure d'une vie</p>
-				<a href="#">Lire plus</a>
+				<p class="text">By Greg / Juillet 2023</p>
+				<p class="text">L'aventure d'une vie</p>
+				<a href="#" class="text">Lire plus</a>
 			</div>
 		</div>
 		<section id="articles">
 			<div class="sectionTitle">
-				<h2>Nos derniers articles</h2>
+				<h2 class="title">Nos derniers articles</h2>
 			</div>
 			<div>
 				<a href="#">
@@ -70,8 +72,8 @@
 							<img src="./assets/images/home/articles/medoc.jpg" alt="Marathon du Médoc">
 						</div>
 						<figcaption>
-							<h2>Le marathon du médoc</h2>
-							<p>Course - France - Nouvelle aquitaine</p>
+							<h2 class="title">Le marathon du médoc</h2>
+							<p class="text">Course - France - Nouvelle aquitaine</p>
 						</figcaption>
 					</figure>
 				</a>
@@ -81,8 +83,8 @@
 							<img src="./assets/images/home/articles/cognac.jpg" alt="Marathon de Cognac">
 						</div>
 						<figcaption>
-							<h2>le marathon de cognac</h2>
-							<p>Course - France - Nouvelle aquitaine</p>
+							<h2 class="title">le marathon de cognac</h2>
+							<p class="text">Course - France - Nouvelle aquitaine</p>
 						</figcaption>
 					</figure>
 				</a>
@@ -92,8 +94,8 @@
 							<img src="./assets/images/home/articles/dietetique.jpg" alt="Préparation marathon">
 						</div>
 						<figcaption>
-							<h2>Alimentation avant la course</h2>
-							<p>Conseils</p>
+							<h2 class="title">Alimentation avant la course</h2>
+							<p class="text">Conseils</p>
 						</figcaption>
 					</figure>
 				</a>
@@ -101,13 +103,13 @@
 		</section>
 		<section id="temoignage">
 			<div class="sectionTitle">
-				<h2>Sur la ligne d'arrivée</h2>
+				<h2 class="title">Sur la ligne d'arrivée</h2>
 			</div>
 			<div>
-				<blockquote>
+				<blockquote class="title">
 					<em>Au départ : une adrénaline de ouf, au 32ème : un coup de barre XXL</em>
 				</blockquote>
-				<p class="texte_paragraphe"> L’hymne américain retenti, le coup de canon part…la course est lancée.
+				<p class="texte_paragraphe text"> L’hymne américain retenti, le coup de canon part…la course est lancée.
 					A moi New York mais avant il va falloir passer le Verazano Brigde.
 					ça grimpe dur mais qu’est ce que c’est beau. Ensuite c’est 42,190
 					dans les 5 quartiers de New York avec du monde (beaucoup de monde) sur le bord de route.
@@ -122,7 +124,7 @@
 		</section>
 		<section id="instagram">
 			<div class="sectionTitle">
-				<h2>Passion Marathons sur Instagram</h2>
+				<h2 class="title">Passion Marathons sur Instagram</h2>
 			</div>
 			<div>
 				<?php

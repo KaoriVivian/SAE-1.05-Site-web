@@ -1,5 +1,4 @@
 window.addEventListener('DOMContentLoaded', function () {
-    let texts = ["#title", "#text"];
 
     const min_textSize = this.document.getElementById("min_textSize");
     const reset_textSize = this.document.getElementById('reset_textSize');
@@ -21,22 +20,22 @@ window.addEventListener('DOMContentLoaded', function () {
     });
 
     min_textSize.addEventListener('click', function () {
-        changeFontSize('-1');
+        changeFontSize('min');
     });
 
     reset_textSize.addEventListener('click', function () {
-        changeFontSize('0');
+        changeFontSize('reset');
     });
 
     max_textSize.addEventListener('click', function () {
-        changeFontSize('1');
+        changeFontSize('max');
     });
 
 
 })
 
-function changeFontSize(type) {
-    let texts = ["#title", "#text"];
+let texts = [".title", ".text"];
+function changeFontSize(mode) {
     let TitleDefaultSize = 32;
     let TextsDefaultSize = 16;
 
@@ -50,30 +49,32 @@ function changeFontSize(type) {
 
             fontSize = parseFloat(fontSize);
 
-            if (type === "1") {
-                element.style.fontSize = (fontSize + 3) + "px";
-            } else if (type === "0") {
+            switch (mode){
+                case 'min':
+                    element.style.fontSize = (fontSize - 3) + "px"
+                case 'max':
+                    element.style.fontSize = (fontSize + 3) + "px";
+                    break;
 
-                if (element.id === "title") {
-                    element.style.fontSize = TitleDefaultSize + "px";
-                } else {
-                    element.style.fontSize = TextsDefaultSize + "px";
-                }
-
-            } else {
-                element.style.fontSize = (fontSize - 3) + "px";
+                case 'reset':
+                default:
+                    if (element.id === "title") {
+                        element.style.fontSize = TitleDefaultSize + "px";
+                    } else {
+                        element.style.fontSize = TextsDefaultSize + "px";
+                    }
+                    break;
             }
         })
     })
 }
 
-function DyslexieMode(type) {
-    let texts = ["#title", "#text"];
+function DyslexieMode(state) {
 
     texts.forEach(text => {
         let el = document.querySelectorAll(text);
 
-        if (type === "true") {
+        if (state) {
             el.forEach(element => {
                 element.style.fontFamily = "Open-Dyslexie";
             })
@@ -85,18 +86,18 @@ function DyslexieMode(type) {
     })
 }
 
-function ChangeThemeColor(type) {
-    let texts = ["#title", "#text"];
+function ChangeThemeColor(mode) {
+
     let body = document.querySelector("body")
 
     texts.forEach(text => {
         let el = document.querySelectorAll(text);
 
         el.forEach(element => {
-            if (type === "Bleu") {
+            if (mode === "Bleu") {
                 element.style.color = "#000066";
                 body.style.backgroundColor = "#ffb300"
-            } else if (type === "Red") {
+            } else if (mode === "Red") {
                 element.style.color = "#660000";
                 body.style.backgroundColor = "#ffff00"
             } else {
@@ -109,8 +110,8 @@ function ChangeThemeColor(type) {
 
 function validateDyslexieMode() {
     if (dyslexiaSlider.checked == 1) {
-        DyslexieMode("true");
+        DyslexieMode(true);
     } else {
-        DyslexieMode("false");
+        DyslexieMode(false);
     }
 }

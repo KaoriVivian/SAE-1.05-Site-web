@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
+	<title>Calculatrice de Passions marathons</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,6 +14,8 @@
 </head>
 
 <body>
+	<?php include './../assets/compenents/accesibilite.html'; ?>
+	
 	<div id="mainBloc">
 		<header>
 			<img src="./../assets/images/banniere.png" alt="Passion Marathons - Agence spécialisées dans les marathons">
@@ -46,13 +48,13 @@
 			</a>
 		</nav>
 		<div class="titre_section">
-			<h2>La calculatrice de Passion Marathons</h2>
+			<h2 class='title'>La calculatrice de Passion Marathons</h2>
 		</div>
 		<div id="calculatorGoals">
-			<blockquote>
+			<blockquote class="title">
 				Un Objectif : Votre Santé
 			</blockquote>
-			<p>
+			<p class="text">
 				Chez passions marathons nous pensons qu'il est indispensable d'avoir un suivi de santé le plus fiable
 				possible.
 				C'est pour cela que nous avons mis en place <strong>une calculatrice</strong> pour mesurer combien de
@@ -65,25 +67,25 @@
 				possible
 				pour que vous ayez les plus beaux macarons disponibles !
 			</p>
-			<p>Le fonctionnement de la calculatrice est simple, vous n'avez qu'à entrer la vitesse moyenne de votre
+			<p class="text">Le fonctionnement de la calculatrice est simple, vous n'avez qu'à entrer la vitesse moyenne de votre
 				course, le temps que vous avez pris et votre poids et le calcul se fera automatiquement ! </p>
 
 			<br>
 
-			<button id="btnStart">Commencer</button>
+			<button id="btnStart" class="text">Commencer</button>
 		</div>
 
 		<div id="calculatorBody" style="display: none;">
 			<div id="spdD">
-				<p>Vitesse: </p>
+				<p class="text">Vitesse: </p>
 				<input type="text" id="speed" placeholder="Vitesse en Km/h...">
 			</div>
 			<div id="timeD" style="display: none;">
-				<p>Temps (Minutes): </p>
+				<p class="text">Temps (Minutes): </p>
 				<input type="text" id="time" placeholder="Temps en Min...">
 			</div>
 			<div id="wgtD" style="display: none;">
-				<p>Poids (Kg): </p>
+				<p class="text">Poids (Kg): </p>
 				<input type="text" id="weight" placeholder="Poids en Kg...">
 			</div>
 		</div>

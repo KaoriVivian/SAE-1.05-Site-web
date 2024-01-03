@@ -21,12 +21,12 @@
                 style="z-index: 3; position: absolute; width: inherit;"  tabindex="1"></div>
             <div
                 style="display: flex; position: absolute; flex-direction: column; align-items: center; top: 50px; width: inherit;">
-                <h1 id="title" tabindex="1">Viviane</h1>
+                <h1 class="title" tabindex="1">Viviane</h1>
                 <nav class="rs text" tabindex="1">
-                    <i class="fa-brands fa-instagram" tabindex="1"></i>
-                    <i class="fa-brands fa-x-twitter" tabindex="1"></i>
-                    <i class="fa-brands fa-discord" tabindex="1"></i>
-                </nav>
+                    <a href="https://www.instagram.com/kaoprojects/"><i class="fa-brands fa-instagram" tabindex="1"></i></a>
+                    <a href="https://twitter.com/kaoprojects_"><i class="fa-brands fa-x-twitter" tabindex="1"></i>  </a>
+                    <a href="https://discord.com/users/366309880333598723"><i class="fa-brands fa-discord" tabindex="1"></i>
+                </nav></a>
             </div>
         </div>
         <div id="section_droite">
@@ -34,9 +34,9 @@
                 style="z-index: 3; position: absolute; width: inherit;"  tabindex="1"></div>
             <div
                 style="display: flex; position: absolute; flex-direction: column; align-items: center; bottom: 50px; width: inherit;">
-                <h1 id="title" tabindex="1">Khaled</h1>
+                <h1 class="title" tabindex="1">Khaled</h1>
                 <nav class="rs text" tabindex="1">
-                    <i class="fa-brands fa-discord" tabindex="1"></i>
+                    <a href="https://discord.com/users/872910449933434890"><i class="fa-brands fa-discord" tabindex="1"></i></a>
                     <i class="fa-brands fa-whatsapp" tabindex="1"></i>
                 </nav>
             </div>
